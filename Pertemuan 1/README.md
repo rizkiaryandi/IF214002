@@ -6,7 +6,7 @@
 5. Instalasi Dbeaver
 
 ## Hasil
-- [ERD Draw.io](./Pertemuan 1.drawio)
+- [ERD Draw.io](./Pertemuan%201.drawio)
 
 ##Kendala
 -

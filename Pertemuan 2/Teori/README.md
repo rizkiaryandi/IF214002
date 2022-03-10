@@ -3,7 +3,7 @@ Perancangan ERD dibutuhkan untuk normalisasi dan keteraturan sebelum pembuatan D
 
 
 ## Ringkasan Materi
-- [Outline](./2.%20Outline.jpg)
+![Plot](./2.%20Outline.jpg)
 
 ##Kendala
 -

@@ -1,5 +1,5 @@
 # Ide Bisnis: Sistem Kontrol Keadaan Sungai dan Daerah Sekitarnya
-[ERD](./ERD-Pertemuan-2.jpg)
+[Plot](./ERD-Pertemuan-2.jpg)
 ## Deskripsi
 Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi ini dapat memperbaiki kualitas sungai di Indonesia. Pada aplikasi ini meliputi,
 ### Mobile Petugas:

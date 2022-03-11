@@ -1,5 +1,5 @@
-# Ide Bisnis: Sistem Managemen Sungai dan Daerah Sekitarnya 
-
+# Ide Bisnis: Sistem Kontrol Keadaan Sungai dan Daerah Sekitarnya
+[ERD](./ERD-Pertemuan-2.jpg)
 ## Deskripsi
 Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi ini dapat memperbaiki kualitas sungai di Indonesia. Pada aplikasi ini meliputi,
 ### Mobile Petugas:
@@ -99,6 +99,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - public_pollution_title
 - public_pollution_description
+- public_pollution_longitude
+- public_pollution_lattitude
 - public_pollution_type
 - public_pollution_img
 - public_pollution_status
@@ -110,6 +112,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - industry_pollution_title
 - industry_pollution_description
+- industry_pollution_longitude
+- industry_pollution_lattitude
 - industry_pollution_type
 - industry_pollution_img
 - industry_pollution_status
@@ -129,6 +133,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - (FK) river_id
 - river_condition_description
+- river_condition_longitude
+- river_condition_lattitude
 - river_condition_status
 - river_condition_handling_status
 - created_at
@@ -140,6 +146,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - (FK) creek_id
 - creek_condition_description
+- creek_condition_longitude
+- creek_condition_lattitude
 - creek_condition_status
 - creek_condition_handling_status
 - created_at
@@ -151,6 +159,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - (FK) drain_id
 - drain_condition_description
+- drain_condition_longitude
+- drain_condition_lattitude
 - drain_condition_status
 - drain_condition_handling_status
 - created_at
@@ -162,6 +172,8 @@ Diwujudkannya aplikasi ini dibarengi dengan harapan dengan kehadiran aplikasi in
 - (FK) observer_id
 - (FK) dike_id
 - dike_condition_description
+- dike_condition_longitude
+- dike_condition_lattitude
 - dike_condition_status
 - dike_condition_handling_status
 - created_at

@@ -1,4 +1,7 @@
-# IF214002
-Assalamu'alaikum, saya Rizki Aryandi mahasiswa Teknik Informatika UIN Sunan Gunung Djati Bandung, NIM 1207050110.
-#
-Kunjungi website github saya di - [sini](https://rizkiaryandi.github.io) dan websitu utama saya di - [https://founder.yandmedia.id](https://founder.yandmedia.id)
+#### Nama   : Rizki Aryandi
+#### NIM	  : 1207050110
+-------------------------------------------
+
+#### Website : [https://founder.yandmedia.id/](https://founder.yandmedia.id//)
+#### Github  : [https://github.com/rizkiaryandi](https://github.com/rizkiaryandi/)
+#### Work AT  : [PT Alcotech Indonesia](https://alcotech.id/)

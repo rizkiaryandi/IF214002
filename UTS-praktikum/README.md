@@ -2,7 +2,27 @@
 #### NIM	  : 1207050110
 -------------------------------------------
 
-# UTS Praktikum
+### UTS Praktikum
+#### 1. Jelaskan contoh-contoh perintah SQL beserta kegunannya !
+#### Jawab
+###### Berikut adalah contoh perintah SQL menggunakan DBMS MySQL
+- CREATE DATABASE: adalah perintah untuk membuat database. Contoh penggunaannya seprti "CREATE DATABASE mahasiswa"
+- USE: adalah perintah pada MySQK untuk memilih database mana yang akan kita operasikan. Contoh: "USE mahasiswa"
+- CREATE TABLE: adalah perintah untuk membuat tabel pada database. Contoh penggunaannya seperti "CREATE TABLE users ( //Isi Tabel Tersebut)"
+- ALTER TABLE: adalah perintah untuk operasi pada kolom tabel, ALTER TABLE selalu diikuti oleh jenis operasi apa yang akan diberikan seperti ADD, MODIFY, REMOVE, dan lainnya. Contohnya: "ALTER TABLE users ADD ...."
+- INSERT: adalah perintah untuk menginput data pada tabel. Contohnya, "INSERT INTO users ('..', '..', '..') VALUES ('..', '..', '..')"
+- SELECT: adalah perintah untuk membaca data pada tabel, operasi ini lengkap dengan berbagai variasi seperti WHERE, LIKE, JOIN, CALL, dan lainnya.
+- UPDATE: adalah perintah untuk mengupdate data pada tabel, biasanya dibarengi oleh WHERE untuk memilih data mana yang akan diedit. Seperti "UPDATE users SET ... = '...' WHERE .. = '..'"
+- DELETE: adalah perintah untuk menghapus data pada tabel, biasanya dibarengi oleh WHERE untuk memilih data mana yang akan dihapus. Seperti "DELETE FROM users WHERE .. = '..'"
+- CREATE PROCEDURE: adalah perintah untuk membuat prosedur. Prosedur sendiri ditujukan untuk dapat mengeksekusi beberapa tindakan dalam satu perintah CALL prosedur.
+- CREATE FUNCTION: adalah perintah untuk membuat fungsi. Fungsi sendiri ditujukan pada kondisi tertentu dapat dieksekusi suatu tindakan seperti konversi bilangan bulat dan lainnya.
+- CREATE TRIGGER: adalah perintah untuk membuat aksi trigger. Trigger sendiri adalah aksi yang akan diberikan pada saat tindakan seperti saat on insert, on update, on delete.
+- COMMIT: Pada beberapa kondisi tertentu diperlukan commit guna eksekusi query dapat terlebih dahulu ditahan sebelum commit.
+- ROLLBACK: Perintah ini dipakai ketika seandainya commit tidak jadi maka rollback adalah mengembalikan kondisi data kepada kondisi sebelumnya  
+
+#### 2. Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda. Berdasarkan ERD yang telah dibuat, buatlah implementasi basis data dari ERD tersebut dalam bentuk tabel basis data lengkap dengan Primary Key, Foreign Key dengan menggunakan perintah CREATE TABLE bahasa SQL. Anda dapat menggunakan vendor basis data yang Anda sukai (MySQL / PostgreSQL / SQL Server / dsb.). Jika belum sempat install basis data di laptop, bisa menggunakan sqliteonline.com untuk mengecek keberhasilan pembuatan tabelnya.
+
+##### Jawab
 Aplikasi Monitoring Keadaan Sungai dan Sekitarnya menggunakan DBMS MySQL
 
 ##### provinces

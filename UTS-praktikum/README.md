@@ -22,9 +22,8 @@
 
 #### 2. Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda. Berdasarkan ERD yang telah dibuat, buatlah implementasi basis data dari ERD tersebut dalam bentuk tabel basis data lengkap dengan Primary Key, Foreign Key dengan menggunakan perintah CREATE TABLE bahasa SQL. Anda dapat menggunakan vendor basis data yang Anda sukai (MySQL / PostgreSQL / SQL Server / dsb.). Jika belum sempat install basis data di laptop, bisa menggunakan sqliteonline.com untuk mengecek keberhasilan pembuatan tabelnya.
 
-##### Jawab
-Aplikasi Monitoring Keadaan Sungai dan Sekitarnya menggunakan DBMS MySQL
-
+##### Jawab (Ket: FOREIGN KEY dipisahkan menggunakan ALTER. Query ada di paling bawah setelah semua CREATE Table)
+Aplikasi Monitoring Keadaan Sungai dan Sekitarnya menggunakan DBMS MySQL. Alasan foreign keyn dipisahkan menggunakan alter adalah agar foreign key di add setelah seluruh tabel selesai dibuat.  
 ##### provinces
 ```sql
 CREATE TABLE `provinces` (
@@ -277,5 +276,97 @@ CREATE TABLE `industry_pollutions` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
 )
+
+```
+
+
+##### ALTER FOREIGN KEY
+```sql
+ALTER TABLE `administrators`
+  ADD CONSTRAINT `FK_USER_ADMINISTRATOR` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `creeks`
+  ADD CONSTRAINT `FK_CREEKS_RIVER` FOREIGN KEY (`river_id`) REFERENCES `rivers` (`river_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `creek_conditions`
+  ADD CONSTRAINT `FK_CREEK_CREEK_CONDITIONS` FOREIGN KEY (`creek_id`) REFERENCES `creeks` (`creek_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_OBSERVER_CREEK_CONDITIONS` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `dikes`
+  ADD CONSTRAINT `FK_DIKE_REGIONAL_UNIT` FOREIGN KEY (`regional_unit_id`) REFERENCES `regional_units` (`regional_unit_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_DIKE_RIVER` FOREIGN KEY (`river_id`) REFERENCES `rivers` (`river_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `dike_conditions`
+  ADD CONSTRAINT `FK_DIKE_DIKE_CONDITION` FOREIGN KEY (`dike_id`) REFERENCES `dikes` (`dike_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_OBSERVER_DIKE_CONDITION` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `drain_conditions`
+  ADD CONSTRAINT `FK_DRAIN_DRAIN_CONDITION` FOREIGN KEY (`drain_id`) REFERENCES `drains` (`drain_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_OBSERVER_DRAIN_CONDITION` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `industry_pollutions`
+  ADD CONSTRAINT `FK_OBSERVER_INDUSTRY_POLUTION` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `observers`
+  ADD CONSTRAINT `FK_OBSERVER_REGIONAL_UNIT` FOREIGN KEY (`regional_unit_id`) REFERENCES `regional_units` (`regional_unit_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_USER_OBSERVER` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `public_pollutions`
+  ADD CONSTRAINT `FK_OBSERVER_PUBLIC_POLUTION` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `regional_units`
+  ADD CONSTRAINT `FK_MAIN_ADMINISTRATOR_REGIONAL_UNIT` FOREIGN KEY (`main_administrator_id`) REFERENCES `administrators` (`administrator_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `river_conditions`
+  ADD CONSTRAINT `FK_OBSERVER_RIVER_CONDITION` FOREIGN KEY (`observer_id`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+```
+
+```sql
+ALTER TABLE `support_devices`
+  ADD CONSTRAINT `FK_LAST_UPDATE_SUPPORT_DEVICE` FOREIGN KEY (`last_updated_condition_by`) REFERENCES `observers` (`observer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_SUPPORT_DEVICE_REGIONAL_UNIT` FOREIGN KEY (`regional_unit_id`) REFERENCES `regional_units` (`regional_unit_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 
 ```

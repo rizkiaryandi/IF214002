@@ -1,0 +1,6 @@
+[database]
+database = attaqwa
+username = flectra
+password = flectra
+[app]
+baseURL = http://attaqwa.demasjid.test

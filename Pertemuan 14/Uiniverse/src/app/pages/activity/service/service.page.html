@@ -1,0 +1,106 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesNavigate('home')">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Jasa</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item lines="none">
+    <ion-buttons>
+      <ion-label color="primary">Urutkan</ion-label>
+      <ion-select value="notifications" interface="action-sheet" mode="ios" (ionChange)="sort($event.target.value)">
+        <ion-select-option value="relevansi">Relevansi</ion-select-option>
+        <ion-select-option value="terbaru">Terbaru</ion-select-option>
+        <ion-select-option value="termahal">Bayaran Tertinggi</ion-select-option>
+      </ion-select>
+    </ion-buttons>
+    <ion-button color="success" fill="solid" size="small" mode="ios" (click)="gn.pagesNavigate('service/add')">
+      <ion-icon name="add-outline" slot="start"></ion-icon>
+      Perlu Jasa
+    </ion-button>
+    <ion-button color="primary" fill="solid" size="small" mode="ios" (click)="gn.pagesNavigate('service/list')">
+      <ion-icon name="list-outline" slot="start"></ion-icon> Pencarian
+    </ion-button>
+  </ion-item>
+  <section id="body-container">
+    
+    <div class="y-card alert">
+      <b>Bayaran</b> merupakan harga yang dibayar atas jasa yang anda kerjakan
+    </div>
+    <div [ngStyle]="dis.jasa.empty" class="ion-text-center h8 ion-padding">
+      <p>Tidak ada jasa yang dapat diambil untuk saat ini</p>
+      <ion-button (click)="refresh()" fill="outline" mode="ios">
+        Segarkan
+      </ion-button>
+    </div>
+    <div *ngFor="let js of jasa" [ngStyle]="dis.jasa.main">
+      <ion-label>
+        <p class="user">{{js.name}}</p>
+        <p class="title">{{js.title}}</p>
+        <p class="text">{{js.text}}</p>
+        <p class="payment"><b>Bayaran:</b> Rp {{js.payment}}</p>
+        <ion-button size="small" color="primary" mode="ios" (click)="gn.pagesNavigate('service/detail/'+js.id)">Lihat</ion-button>
+        <ion-button size="small" color="success" mode="ios" (click)="waSend(js.tel, js.name)">
+          <ion-icon slot="start" name="logo-whatsapp"></ion-icon> Ambil
+        </ion-button>
+      </ion-label>
+    </div>
+    <div [ngStyle]="dis.jasa.slider">
+      <div class="cont">
+        <ion-label>
+          <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+        </ion-label>
+      </div>
+      <div class="cont">
+        <ion-label>
+          <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+        </ion-label>
+      </div>
+      <div class="cont">
+        <ion-label>
+          <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+        </ion-label>
+      </div>
+      <div class="cont">
+        <ion-label>
+          <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+        </ion-label>
+      </div>
+      <div class="cont">
+        <ion-label>
+          <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+        </ion-label>
+      </div>
+    </div>
+  </section>
+</ion-content>

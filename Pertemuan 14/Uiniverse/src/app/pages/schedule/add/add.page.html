@@ -1,0 +1,121 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesNavigate('schedule/'+id)">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Tambah Jadwal</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item>
+    <ion-label>Jenis Jadwal</ion-label>
+    <ion-select [(ngModel)]="id" interface="popover" (ionChange)="changedForm($event.target.value)">
+      <ion-select-option value="0">Mata Kuliah</ion-select-option>
+      <ion-select-option value="1">Tugas</ion-select-option>
+      <ion-select-option value="2">Acara Penting</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <form *ngIf="id == '0'" id="mata-kuliah" (ngSubmit)="addMatkul()" ngNativeValidate>
+    <ion-list mode="md">
+        <ion-item>
+          <ion-label position="floating">Nama Mata Kuliah</ion-label>
+          <ion-input type="text" [(ngModel)]="matkul.name" name="name" minLength="2" maxLength="50" required></ion-input>
+        </ion-item><i class="fas fa-cloud-showers-heavy    "></i>
+        <ion-item>
+          <ion-label position="floating">Dosen/Keterangan</ion-label>
+          <ion-textarea type="text" [(ngModel)]="matkul.description" name="deskripsi" required></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hari</ion-label>
+          <ion-select [(ngModel)]="matkul.specific" name="specific" mode="ios" interface="action-sheet" required>
+            <ion-select-option value="1">Senin</ion-select-option>
+            <ion-select-option value="2">Selasa</ion-select-option>
+            <ion-select-option value="3">Rabu</ion-select-option>
+            <ion-select-option value="4">Kamis</ion-select-option>
+            <ion-select-option value="5">Jumat</ion-select-option>
+            <ion-select-option value="6">Sabtu</ion-select-option>
+            <ion-select-option value="7">Minggu</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Waktu Mulai</ion-label>
+          <ion-input type="time" [(ngModel)]="matkul.deadline_start" name="deadline_start" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Waktu Selesai</ion-label>
+          <ion-input type="time" [(ngModel)]="matkul.deadline_end" name="deadline_end" required></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label position="floating">Url (Url Absensi E-Knows)</ion-label>
+          <ion-input type="url" [(ngModel)]="matkul.url" name="url"></ion-input>
+        </ion-item> -->
+        <ion-button size="default" mode="ios" expand="block" type="submit">
+          Tambah Mata Kuliah
+        </ion-button>
+    </ion-list>
+  </form>
+  <form *ngIf="id == '1'" id="tugas" (ngSubmit)="addTugas()" ngNativeValidate>
+    <ion-list mode="md">
+      <ion-item>
+        <ion-label position="floating">Nama Tugas</ion-label>
+        <ion-input type="text" [(ngModel)]="tugas.name" name="name" minLength="2" maxLength="50" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Keterangan</ion-label>
+        <ion-textarea type="text" [(ngModel)]="tugas.description" name="deskripsi"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Jenis Tugas</ion-label>
+        <ion-select [(ngModel)]="tugas.specific" name="specific" mode="ios" interface="action-sheet" required>
+          <ion-select-option value="Tugas Mata Kuliah">Tugas Mata Kuliah</ion-select-option>
+          <ion-select-option value="Tugas Kampus">Tugas Kampus</ion-select-option>
+          <ion-select-option value="Tugas Fakultas">Tugas Fakultas</ion-select-option>
+          <ion-select-option value="Tugas Prodi">Tugas Prodi</ion-select-option>
+          <ion-select-option value="Tugas Organisasi">Tugas Organisasi</ion-select-option>
+          <ion-select-option value="Tugas Pribadi">Tugas Pribadi</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Deadline</ion-label>
+        <ion-input type="datetime-local" [(ngModel)]="tugas.deadline_start" name="deadline_start" required></ion-input>
+      </ion-item>
+      <ion-button size="default" mode="ios" expand="block" type="submit">
+        Tambah Tugas
+      </ion-button>
+    </ion-list>
+  </form>
+  <form *ngIf="id == '2'" id="acara-penting" (ngSubmit)="addAcara()" ngNativeValidate>
+    <ion-list mode="md">
+      <ion-item>
+        <ion-label position="floating">Nama Acara</ion-label>
+        <ion-input type="text" [(ngModel)]="acara.name" name="name" minLength="2" maxLength="50" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Keterangan</ion-label>
+        <ion-textarea type="text" [(ngModel)]="acara.description" name="deskripsi"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Jenis Acara</ion-label>
+        <ion-select [(ngModel)]="acara.specific" name="specific" mode="ios" interface="action-sheet" required>
+          <ion-select-option value="Acara Kampus">Acara Kampus</ion-select-option>
+          <ion-select-option value="Acara Pribadi">Acara Pribadi</ion-select-option>
+          <ion-select-option value="Acara Fakultas">Acara Fakultas</ion-select-option>
+          <ion-select-option value="Acara Jurusan">Acara Jurusan</ion-select-option>
+          <ion-select-option value="Acara Organisasi">Acara Organisasi</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Waktu Mulai</ion-label>
+        <ion-input type="datetime-local" [(ngModel)]="acara.deadline_start" name="deadline_start" required></ion-input>
+      </ion-item>
+      <ion-button size="default" mode="ios" expand="block" type="submit">
+        Tambah Acara
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>

@@ -1,0 +1,46 @@
+ion-header{
+    ion-toolbar{
+        padding: 10px 16px 0px 16px;
+        background-color: #fff;
+        ion-buttons{
+          ion-back-button{
+              margin-right: 15px;
+              font-size: 12px;
+          }
+          ion-label{
+              font-size: 18px;
+          }
+        }
+        ion-avatar{
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--ion-color-light);
+        }
+    }
+}
+
+ion-content{
+    #btn{
+        padding-top: 10px;
+        h6{
+            font-size: 14px;
+            margin: 8px 0px 0px 0px;
+        }
+    }
+
+    ion-textarea{
+        min-height: 50vh;
+    }
+
+    ion-slide{
+        padding-left: 5px;
+        padding-bottom: 20px;
+        img{
+            height: 85px;
+        }
+        ion-button{
+            position: fixed;
+            bottom: 0px;
+        }
+    }
+}

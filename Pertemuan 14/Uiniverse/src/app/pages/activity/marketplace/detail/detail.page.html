@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="marketplace" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-searchbar mode="ios" placeholder="Cari Sesuatu" (click)="mainSearch($event)" class="searchbarinput"></ion-searchbar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div [ngStyle]="dis.marketplace.slider" style="background-color: var(--ion-color-light); height: 100vh;">
+    <ion-skeleton-text animated style="height: 100vw;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="height: 100px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="height: 140px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="height: 85px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="height: 90px;"></ion-skeleton-text>
+  </div>
+  <div [ngStyle]="dis.marketplace.empty" class="ion-padding" style="background-color: #fff; height: 100vh;">
+    <div class="empty">
+      <p>
+        Sepertinya item yang anda cari sudah tidak ada
+      </p>
+      <ion-button class="ion-margin-top" (click)="gn.pagesNavigate('marketplace')" fill="outline" mode="ios" size="small">
+        Lihat Item lainnya
+      </ion-button>
+    </div>
+  </div>
+  <div [ngStyle]="dis.marketplace.main">
+    <ion-slides *ngIf="mi.images != '[]'; else prf;" pager="true" [options]="{
+      initialSlide: 0
+    }">
+      <ion-slide *ngFor="let im of gn.jParse(mi.images)">
+        <div class="thumbnail">
+          <img [src]="gn._base+'images/marketplace/'+im">
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+
+    <ng-template #prf>
+      <div class="thumbnail">
+        <img src="/assets/img/no-image.png">
+      </div>
+    </ng-template>
+    <section id="info">
+      <div class="y-card detail">
+        <p class="title">Rp {{mi.price}}</p>
+        <p class="text" lines="none">{{mi.title}}</p>
+        <p class="text"><b>Lokasi: </b>{{mi.location}}</p>
+      </div>
+  
+      <div class="y-card whatsapp">
+        <p class="title"><b>Kirim pesan ke penjual</b></p>
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-searchbar searchIcon="logo-whatsapp" mode="ios" placeholder="Kirim pertanyaan ke seller" class="searchbarinput" [(ngModel)]="textWa"></ion-searchbar>
+          <ion-button color="success" class="ion-no-margin" size="default" mode="ios" (click)="waSend()">
+            Kirim
+          </ion-button>
+        </ion-item>
+        <ion-button color="primary" expand="block" mode="ios" size="small" (click)="pagesNavigate('user/'+mi.user_id)">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          {{mi.name}}
+        </ion-button>
+      </div>
+      
+      <div class="y-card description">
+        <p class="title"><b>Deskripsi</b></p>
+        <p class="text">{{mi.description}}</p>
+      </div>
+  
+      <div class="y-card alert">
+        <p class="title">
+          <b>Peringatan</b>
+        </p>
+        <p class="text">
+          Lakukan pembayaran secara COD atau Rekber untuk transaksi yang lebih aman
+        </p>
+      </div>
+    </section>
+  </div>
+  
+</ion-content>

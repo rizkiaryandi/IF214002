@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="marketplace" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-label color="primary">
+        <b>{{judul}}</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="logForm()" ngNativeValidate>
+    <ion-list mode="md" class="ion-padding">
+      <ion-item>
+        <ion-label position="floating">Nama Item</ion-label>
+        <ion-input type="title" [(ngModel)]="todo.title" minLength="2" maxLength="50" name="nama" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Harga (Rp)</ion-label>
+        <ion-input type="tel" (ionChange)="rp($event)" [(ngModel)]="todo.price" name="price" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lokasi (Lokasi COD atau tempat tinggal anda)</ion-label>
+        <ion-textarea type="text" [(ngModel)]="todo.location" name="location" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Deskripsi</ion-label>
+        <ion-textarea type="text" [(ngModel)]="todo.description" name="description" required></ion-textarea>
+      </ion-item>
+
+
+
+      <ion-slides *ngIf="imgPrev.length > 0" [options]="{
+        initialSlide: 0,
+        slidesPerView : 3.4
+      }">
+        <ion-slide *ngFor = "let im of imgPrev">
+          <img [src]="im.src || im">
+          <ion-button size="small" color="danger" mode="ios" shape="round" (click)="rmImg(im)">
+            Buang
+          </ion-button>
+        </ion-slide>
+      </ion-slides>
+  
+      <input name="image" class="ion-hide" #f type="file" (change)="sImage($event)" accept="image/*">
+
+
+      <ion-item lines="none">
+        <ion-button size="small" mode="ios" color="success" (click)="f.click($event)">
+          <ion-icon name="add-outline" slot="start"></ion-icon> Gambar Produk
+        </ion-button>
+      </ion-item>
+      <ion-button size="default" mode="ios" expand="block" type="submit">
+        {{judul}}
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>

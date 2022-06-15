@@ -1,0 +1,160 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesNavigate('home')">
+        <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-label color="light">
+        <b>Jadwal Sholat</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <section [ngStyle]="dis.slider">
+    <div id="jumbotron">
+      <div class="circle">
+        <div style="border-right: solid 2px #fff; padding-right: 0px;">
+          
+        </div>
+        <div style="padding-left: 10px;"></div>
+      </div>
+      <p class="date" style="padding-top: 10px;">
+        <ion-skeleton-text animated style="width: 110px; margin: 0 auto;"></ion-skeleton-text>
+      </p>
+      <p class="location" style="padding-top: 10px;">
+        <ion-skeleton-text animated style="width: 90px; margin: 0 auto;"></ion-skeleton-text>
+      </p>
+    </div>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Imsak</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Subuh</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Dzuhur</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Ashar</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Maghrib</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Isya</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </section>
+  <section [ngStyle]="dis.main">
+    <div id="jumbotron">
+      <div class="circle">
+        <div style="border-right: solid 2px #fff; padding-right: 0px;">Menuju {{going.pray}}</div>
+        <div style="padding-left: 10px;">{{going.time}}</div>
+      </div>
+      <p class="date">
+        {{gn.dSplit(date.gregorian)}}
+      </p>
+      <p class="location">
+        Indonesia
+      </p>
+    </div>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Imsak</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Imsak}}
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Subuh</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Fajr}}
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Dzuhur</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Dhuhr}}
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Ashar</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Asr}}
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Maghrib</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Sunset}}
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="time-outline"></ion-icon>
+        <ion-label class="shalat">
+          <p>Isya</p>
+        </ion-label>
+        <ion-label class="time" slot="end" class="ion-text-right">
+          {{times.Isha}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <p>
+      {{ayat}}
+    </p>
+  </section>
+</ion-content>

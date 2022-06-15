@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="notes" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-label color="primary">
+        <b>Tulis Catatan</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-start ion-padding-end">
+  <form (ngSubmit)="addNotes()" ngNativeValidate>
+    <ion-list class="ion-no-margin ion-no-padding">
+      <ion-item lines="none" class="ion-no-margin ion-no-padding">
+        <ion-textarea placeholder="Tulis Sesuatu" maxlength="10000" autoGrow="true" [(ngModel)]="data.text" name="text" type="text" required></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <div class="save">
+      <ion-button expand="block" mode="ios" type="submit">
+        Simpan
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

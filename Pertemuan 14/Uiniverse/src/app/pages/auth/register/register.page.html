@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" color="primary">
+  <div id="head-container">
+    <ion-buttons>
+      <ion-back-button defaultHref="login" slot="start" mode="ios" icon="arrow-back"></ion-back-button>
+      <ion-label>
+        Pendaftaran Akun
+      </ion-label>
+    </ion-buttons>
+  </div>
+  <div class="container-tengah">
+    <div class="title">
+      <b>Uini</b>verse
+    </div>
+    <div class="subtitle">
+      {{ket}}
+    </div>
+    <form (ngSubmit)="regForm()" ngNativeValidate enctype="multipart/form-data">
+      <ion-slides [options]="slideOptions" #slides>
+        <ion-slide>
+          <ion-item lines="none">
+            <ion-input minLength="3" maxLength="30" (ionChange)="inUsername()" [(ngModel)]="data.username" name="username" placeholder="Nama Pengguna" mode="ios" required></ion-input>
+            <ion-spinner [ngStyle]="spin" name="crescent" color="light"></ion-spinner>
+          </ion-item>
+          
+          <ion-button mode="ios" expand="block" fill="outline" color="light" (click)="nextS(1)" [disabled]="ds[0]">
+            Tahap Selanjutnya
+          </ion-button>
+        </ion-slide>
+        <ion-slide>
+          <ion-item lines="none">
+            <ion-input minLength="8" maxLength="255" (ionChange)="inPassword()" [(ngModel)]="data.password" name="password" type="password" placeholder="Kata Sandi" mode="ios" required></ion-input>
+          </ion-item>
+          
+          <ion-button type="submit" mode="ios" expand="block" size="default" color="success" [disabled]="ds[1]">
+            Buat Akun!
+          </ion-button>
+        </ion-slide>
+      </ion-slides>
+    </form>
+    
+  </div>
+  
+</ion-content>

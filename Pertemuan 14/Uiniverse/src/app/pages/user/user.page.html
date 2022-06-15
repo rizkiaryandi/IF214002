@@ -1,0 +1,221 @@
+<ion-content [fullscreen]="true" color="primary">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div id="head-container">
+      <ion-buttons>
+        <ion-back-button defaultHref="home" slot="start" mode="ios" icon="arrow-back"></ion-back-button>
+      </ion-buttons>
+  </div>
+  <div id="body-container">
+      <section id="pf">
+        <div [ngStyle]="dis.profile.slider" style="padding:6px 16px 0px 16px;">
+            <ion-skeleton-text animated style="width: 100%; height:65px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; height:125px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; height:105px;"></ion-skeleton-text>
+        </div>
+        <div [ngStyle]="dis.profile.main"> 
+            <section id="profile-head">
+                <ion-item lines="none" color="transparent">
+                    <ion-label class="ion-text-start">
+                        <p id="title">
+                            {{profile.name}}  
+                        </p>
+                        <p id="subtitle">
+                            {{profile.information}}
+                        </p>
+                    </ion-label>
+                    <ion-avatar slot="end">
+                      <img src="/assets/img/def_profile.png" alt="profil" *ngIf="profile.img == null; else prof;">
+                      <ng-template #prof>
+                        <img [src]="gn._base+'images/users/thumbnail/usr'+profile.img" alt="profil">
+                      </ng-template>
+                    </ion-avatar>
+                </ion-item>
+            </section>
+            <section id="bio">
+                <span id="title">Tentang Saya</span> - <span id="title">{{profile.username}}</span>
+                <p>
+                    {{profile.bio}}
+                </p>
+                <ion-buttons>
+                    <ion-button mode="ios" size="small" (click)="send(socmed.tel)">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </ion-button>
+                    <ion-button mode="ios" size="small" (click)="send(socmed.ig)">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </ion-button>
+                    <ion-button mode="ios" size="small" (click)="send(socmed.em)">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </section>
+            <section id="address">
+                <span id="title">Saat ini tinggal di:</span>
+                <p>
+                    {{profile.address}}
+                </p>
+            </section>
+        </div>
+      </section>
+      <section id="feature">
+          <ion-segment value="0" mode="ios" (ionChange)="slide($event.target.value)" scrollable>
+              <ion-segment-button value="0">
+                  <ion-label>Forum</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="1">
+                  <ion-label>Marketplace</ion-label>
+              </ion-segment-button>
+          </ion-segment>
+          <ion-slides class="swiper-no-swiping" #slides>
+              <ion-slide>
+                  <div id="forum">
+                    <div class="kosong" [ngStyle]="dis.forum.empty">
+                        Belum ada postingan
+                    </div>
+                    <div [ngStyle]="dis.forum.slider">
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>
+                      <div class="post-wrap">
+                        <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+                      </div>  
+                    </div>
+                    <div [ngStyle]="dis.forum.main" class="post-wrap" *ngFor="let ps of forum">
+                      <ion-item lines="none" button>
+                        <ion-avatar slot="start">
+                          <img src="/assets/img/def_profile.png" alt="profil" *ngIf="ps.profile == null || ps.profile.length == 0; else prof;">
+                          <ng-template #prof>
+                            <img [src]="gn._base+'images/users/thumbnail/usr'+ps.profile" alt="profil">
+                          </ng-template>
+                        </ion-avatar>
+                        <ion-label>
+                          <b>{{ps.name}}</b>
+                        </ion-label>
+                        
+                        <ion-button slot="end" (click)="postAction($event, ps.id)" size="small" fill="clear" color="light" mode="ios" *ngIf="ps.user_id == gn._id">
+                          <ion-icon name="ellipsis-vertical" slot="end"></ion-icon>
+                        </ion-button>
+                      </ion-item>
+                      <ion-slides *ngIf="ps.images && ps.images != '[]'" id="images">
+                        <ion-slide>
+                          <img [src]="gn._base+'images/posts/'+gn.jParse(ps.images)[0]" alt="foto">
+                        </ion-slide>
+                      </ion-slides>
+                      <div class="main" (click)="userClick(ps.id, 'forum/detail/'+ps.id)">
+                        {{abs(ps.text, 80)}} 
+                      </div>
+                      <div class="action">
+                        <ion-button size="small" mode="ios" color="success" (click)="userClick(ps.id, 'forum/detail/'+ps.id)">
+                          <ion-icon name="eye-outline"></ion-icon>
+                          {{ps.views}}
+                        </ion-button>
+                        <ion-button size="small" color="light" mode="ios" fill="outline" (click)="userClick(ps.id, 'forum/detail/'+ps.id+'/ants')">
+                          <ion-icon name="chatbubbles-outline" slot="start"></ion-icon> Komentar<span *ngIf="ps.comment != '0'">&nbsp;• {{ps.discuss}}</span>
+                        </ion-button>
+                        <ion-button size="small" color="light" mode="ios" fill="outline">
+                          <ion-icon name="share-social-outline" slot="start"></ion-icon> Bagikan
+                        </ion-button>
+                      </div>
+                    </div>
+                  </div>
+              </ion-slide>
+              <ion-slide>
+                <div class="kosong" [ngStyle]="dis.marketplace.empty">
+                    Belum ada marketplace
+                </div>
+
+                <ion-grid [ngStyle]="dis.marketplace.main" id="marketplace">
+                  <ion-row>
+                      <ion-col size="6" *ngFor="let mp of marketplace" (click)="gn.pagesNavigate('marketplace/detail/'+mp.id)">
+                        <div class="thumbnail" *ngIf="mp.thumbnail == NULL">
+                          <img src="/assets/img/no-image.png">
+                        </div>
+                        <div class="thumbnail" *ngIf="mp.thumbnail != NULL">
+                          <img [src]="gn._base+'images/marketplace/thumbnail/'+mp.thumbnail">
+                        </div>
+                      <ion-item color="transparent" lines="none">
+                          <ion-label>
+                          <p class="price">Rp {{mp.price}}</p>
+                          <p class="name">{{mp.title}}</p>
+                          <p class="location">{{mp.location}}</p>
+                          </ion-label>
+                      </ion-item>
+                      </ion-col>
+                  </ion-row>
+                </ion-grid>
+
+                <ion-grid [ngStyle]="dis.marketplace.slider">
+                    <ion-row>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                    </ion-col>
+                    </ion-row>
+                </ion-grid>
+              </ion-slide>
+              <ion-slide>
+                  <div class="kosong" #prestasiKosong>
+                      Belum ada prestasi
+                  </div>
+              </ion-slide>
+          </ion-slides>
+      </section>
+  </div>
+</ion-content>

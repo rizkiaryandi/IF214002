@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="service" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-label color="primary">
+        <b>Perlu Jasa</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="logForm()" ngNativeValidate>
+    <ion-list mode="md" class="ion-padding">
+      <ion-item>
+        <ion-label position="floating">Keperluan anda?</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.title" name="title" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Deskripsi</ion-label>
+        <ion-textarea type="text" [(ngModel)]="todo.description" name="description" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lokasi (Lokasi COD atau tempat tinggal anda)</ion-label>
+        <ion-textarea type="text" [(ngModel)]="todo.location" name="location" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Bayaran (Upah untuk penyedia jasa)</ion-label>
+        <ion-input type="number" [(ngModel)]="todo.payment" name="payment" required></ion-input>
+      </ion-item>
+      <ion-button size="default" mode="ios" expand="block" type="submit">
+        {{mode}} pencarian Jasa
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>

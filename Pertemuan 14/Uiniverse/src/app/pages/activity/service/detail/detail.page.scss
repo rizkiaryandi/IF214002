@@ -1,0 +1,47 @@
+ion-header{
+    background-color: #fff;
+    ion-toolbar{
+      padding: 10px 0px 6px 0px;
+      background-color: #fff;
+      ion-buttons{
+        ion-back-button{
+            margin-right: 15px;
+            font-size: 12px;
+        }
+        ion-label{
+            font-size: 18px;
+        }
+      }
+    }
+  }
+
+ion-content{
+    p{
+        margin: 4px 0px 0px 0px;
+    }
+    .y-card{
+        margin: 10px;
+        border-radius: 10px;
+        background-color: rgb(var(--ion-color-medium-rgb), 0.1);
+    }
+
+    .alert{
+        background-color: var(--ion-color-primary);
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .info, .profile, .payment{
+        .title{
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .text{
+            font-size: 14px;
+        }
+    }
+
+    ion-col{
+        padding: 0px;
+    }
+}

@@ -1,0 +1,13 @@
+<ion-list lines="none">
+  <ion-label>
+    Profil
+  </ion-label>
+  <ion-item button (click)="pagesNavigate('user/'+id)">
+    <ion-icon name="person-outline"></ion-icon>
+    Buka
+  </ion-item>
+  <ion-item button (click)="pagesNavigate('home/edit')">
+    <ion-icon name="create-outline"></ion-icon>
+    Atur Profil
+  </ion-item>
+</ion-list>

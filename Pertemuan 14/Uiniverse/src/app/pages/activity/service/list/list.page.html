@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="pagesNavigate('service')">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Pencarian Jasa</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="item" *ngFor="let js of jasa" [ngStyle]="dis.jasa.main">
+    <ion-label>
+      <p class="title">{{js.title}}</p>
+      <p class="text">{{js.description}}</p>
+      <p class="payment"><b>Bayaran:</b> Rp {{js.payment}}</p>
+      <ion-button size="small" color="success" mode="ios" (click)="delete(js.id)">Selesai/Hapus</ion-button>
+      <ion-button size="small" color="primary" mode="ios" (click)="gn.pagesNavigate('service/add/'+js.id)">Edit</ion-button>
+    </ion-label>
+  </div>
+  <div [ngStyle]="dis.jasa.empty" class="ion-text-center ion-margin-top">
+    <p>Sepertinya anda belum mencari jasa seseorang</p>
+    <ion-button size="small" (click)="gn.pagesNavigate('service/add')" fill="outline" mode="ios">
+      Saya sedang perlu jasa seseorang
+    </ion-button>
+  </div>
+  <div class="item" [ngStyle]="dis.jasa.slider">
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+  </div>
+</ion-content>

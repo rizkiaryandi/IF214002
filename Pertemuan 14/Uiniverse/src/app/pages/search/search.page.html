@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true" scrollY="false">
+  <div id="body-container">
+    <ion-buttons>
+      <ion-back-button defaultHref="home" mode="ios" icon="arrow-back" color="medium"></ion-back-button>
+      <ion-searchbar [placeholder]="placeholder" (ionInput)="checkUser($event.target.value)" class="searchbarinput" #ic mode="ios"></ion-searchbar>
+    </ion-buttons>
+    <ion-segment [(ngModel)]="metode" (ionChange)="segmentChanged($event)" scrollable>
+      <ion-segment-button value="0">
+        <ion-label>Pengguna</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>Marketplace</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="moh == '0'">
+      <div id="empty">
+        <div class="container-tengah">
+          <div [ngStyle]="{display: st[1]}">
+            <ion-spinner name="crescent" style="font-size: 26px;"></ion-spinner>
+          </div>
+          <div [ngStyle]="{display: st[0]}">
+            <span>
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </span>
+            <p>
+              Tidak ada
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <ion-list [ngStyle]="{display: st[2]}">
+        <ion-item *ngFor="let lh of users" button (click)="gn.pagesNavigate('user/'+lh.us_id)">
+          <ion-avatar slot="start">
+            <img src="/assets/img/def_profile.png" alt="profil" *ngIf="lh.img == null; else prof;">
+            <ng-template #prof>
+              <img [src]="gn._base+'images/users/thumbnail/usr'+lh.img" alt="profil">
+            </ng-template>
+          </ion-avatar>
+          <ion-label>{{lh.username}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+
+    
+    <div *ngIf="moh == '1'" id="ho1">
+      <div id="empty">
+        <div class="container-tengah">
+          <div [ngStyle]="{display: ast[1]}">
+            <ion-spinner name="crescent" style="font-size: 26px;"></ion-spinner>
+          </div>
+          <div [ngStyle]="{display: ast[0]}">
+            <span>
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </span>
+            <p>
+              Tidak ada
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <ion-list [ngStyle]="{display: ast[2]}">
+        <ion-item *ngFor="let lha of items" button (click)="gn.pagesNavigate('marketplace/detail/'+lha.id)">
+          <ion-avatar slot="start">
+            <img [src]="gn._base+'images/marketplace/thumbnail/'+lha.thumbnail" *ngIf="lha.thumbnail; else emp"/>
+            <ng-template #emp>
+              <img src="/assets/img/no-image.png" />
+            </ng-template>
+          </ion-avatar>
+          <ion-label>
+            <p class="title"><b>{{lha.title}}</b></p>
+            <p class="payment">Rp {{lha.price}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+</ion-content>

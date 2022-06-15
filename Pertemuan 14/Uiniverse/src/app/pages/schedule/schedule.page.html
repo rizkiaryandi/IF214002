@@ -1,0 +1,167 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesNavigate('home')">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Penjadwalan</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div id="body-container">
+    <ion-segment [(ngModel)]="metode" (ionChange)="searchMethod($event.target.value)" scrollable>
+      <ion-segment-button value="0">
+        <ion-label>Mata Kuliah</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>Tugas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>Acara Penting</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-slides class="swiper-no-swiping" #slides [options]="slideOpts">
+      <ion-slide>
+          <ion-list>
+            <ion-button expand="block" mode="ios" (click)="gn.pagesNavigate('schedule/add/0')">
+              Tambah Mata Kuliah
+            </ion-button>
+            <div [ngStyle]="dis.college.empty">
+              Tidak ada
+            </div>
+            <div [ngStyle]="dis.college.slider">
+              <ion-skeleton-text animated style="width: 100%; margin-top: 20px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            </div>
+            <div [ngStyle]="dis.college.main">
+              <ion-item lines="none" *ngFor="let cl of college">
+                <ion-label>
+                  <p class="day">
+                    <ion-icon name="paper-plane-outline"></ion-icon> {{gn.day(cl.specific)}}
+                  </p>
+                  <p class="title">
+                    {{cl.name}}
+                  </p>
+                  <p class="description">
+                    {{cl.description}}
+                  </p>
+                  <p class="time">
+                    {{gn.tsTime(cl.deadline_start)}} - {{gn.tsTime(cl.deadline_end)}}
+                  </p>
+                  <ion-button size="small" mode="ios" color="primary" (click)="gn.pagesNavigate('schedule/edit/0/'+cl.id)">
+                    Edit
+                  </ion-button>
+                  <ion-button size="small" mode="ios" color="danger" (click)="delete(cl.id, 1)">
+                    Hapus
+                  </ion-button>
+                </ion-label>
+              </ion-item>
+            </div>
+          </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <ion-button expand="block" mode="ios" (click)="gn.pagesNavigate('schedule/add/1')">
+            Tambah Tugas
+          </ion-button>
+
+          <div [ngStyle]="dis.task.empty">
+            Tidak ada
+          </div>
+          <div [ngStyle]="dis.task.slider">
+            <ion-skeleton-text animated style="width: 100%; margin-top: 20px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+          </div>
+          <div [ngStyle]="dis.task.main">
+            <ion-item lines="none" *ngFor="let ts of task">
+              <ion-label>
+                <p class="day">
+                  <ion-icon name="document-attach-outline"></ion-icon> {{ts.specific}}
+                </p>
+                <p class="title">
+                  {{ts.name}}
+                </p>
+                <p class="description">
+                  {{ts.description}}
+                </p>
+                <p class="time">
+                  Deadline: {{ts.deadline_start}}
+                </p>
+                <ion-button size="small" mode="ios" color="primary" (click)="gn.pagesNavigate('schedule/edit/1/'+ts.id)">
+                  Edit
+                </ion-button>
+                <ion-button size="small" mode="ios" color="success" (click)="delete(ts.id, 2)">
+                  Selesai
+                </ion-button>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>        
+        <ion-list>
+          <ion-button expand="block" mode="ios" (click)="gn.pagesNavigate('schedule/add/2')">
+            Tambah Acara
+          </ion-button>
+          
+          <div [ngStyle]="dis.event.empty">
+            Tidak ada
+          </div>
+          <div [ngStyle]="dis.event.slider">
+            <ion-skeleton-text animated style="width: 100%; margin-top: 20px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+          </div>
+          <div [ngStyle]="dis.event.main">
+            <ion-item lines="none" *ngFor="let ev of event">
+              <ion-label>
+                <p class="day">
+                  <ion-icon name="calendar-number-outline"></ion-icon> {{ev.specific}}
+                </p>
+                <p class="title">
+                  {{ev.name}}
+                </p>
+                <p class="description">
+                  {{ev.description}}-
+                </p>
+                <p class="time">
+                  Mulai: {{ev.deadline_start}}
+                </p>
+                <p class="time">
+                  Selesai: {{ev.deadline_end}}
+                </p>
+                <ion-button size="small" mode="ios" color="primary" (click)="gn.pagesNavigate('schedule/edit/2/'+ev.id)">
+                  Edit
+                </ion-button>
+                <ion-button size="small" mode="ios" color="success" (click)="delete(ev.id, 3)">
+                  Selesai
+                </ion-button>
+              </ion-label>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

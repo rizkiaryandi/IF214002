@@ -1,0 +1,83 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="pagesNavigate('service')">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Detail Jasa</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div [ngStyle]="dis.jasa.empty" class="ion-text-center ion-padding">
+    <p>
+      Uups, sepertinya sudah ada yang mengambil jasa ini
+    </p>
+    <ion-button (click)="gn.pagesNavigate('jasa')" mode="ios" fill="outline">
+      Kembali ke pengambilan jasa
+    </ion-button>
+  </div>
+  <div [ngStyle]="dis.jasa.main">
+    <div class="y-card alert">
+      <b>Bayaran</b> merupakan harga yang dibayar atas jasa yang anda kerjakan
+    </div>
+    <div class="y-card payment">
+      <p class="title">
+        Bayaran jasa
+      </p>
+      <p class="text">
+        {{ji.payment}}
+      </p>
+    </div>
+    <div class="y-card info">
+      <p class="title">
+        {{ji.name}}
+      </p>
+      <p class="text">
+        {{ji.description}}
+      </p>
+    </div>
+    <div class="y-card profile">
+      <p class="title">
+        Lokasi
+      </p>
+      <p class="text">
+        {{ji.location}}
+      </p>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button color="primary" expand="block" mode="ios" size="small" (click)="callP()">
+              <ion-icon name="call-outline" slot="start"></ion-icon>
+              Telepon
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button color="secondary" expand="block" mode="ios" size="small" (click)="pagesNavigate('user/'+ji.user_id)">
+              <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+              Profil
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-button class="ion-margin" color="success" mode="ios" expand="block" (click)="waSend()">
+      <ion-icon name="logo-whatsapp" slot="start"></ion-icon>
+      Ambil
+    </ion-button>
+  </div>
+  <div [ngStyle]="dis.jasa.slider" class="ion-padding-start ion-padding-end">
+    <div class="y-card alert">
+      <b>Bayaran</b> merupakan harga yang dibayar atas jasa yang anda kerjakan
+    </div>
+    <ion-skeleton-text animated style="width: 100%; height:56px; margin-bottom: 10px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; height:80px; margin-bottom: 10px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; height:120px; margin-bottom: 10px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; height:55px; margin-bottom: 10px;"></ion-skeleton-text>
+  </div>
+  
+</ion-content>

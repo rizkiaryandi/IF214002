@@ -1,0 +1,43 @@
+ion-button{
+    text-transform:none!important;
+}
+#head-container{
+    ion-buttons{
+        margin: 20px 0px 0px 15px;
+        ion-back-button{
+            margin-right: 15px;
+            font-size: 12px;
+        }
+        ion-label{
+            font-size: 18px;
+        }
+    }
+}
+#body-container{
+    p{
+        margin: 0px;
+        font-size: 11.5px;
+    }
+    span{
+        font-size: 12.5px;
+    }
+    ion-list-header{
+        ion-label{
+            margin: 0px;
+            font-size: 16px;
+        }
+    }
+    ion-item{
+        ion-label{
+            color: var(--ion-color-medium);
+            font-size: 14px;
+        }
+        ion-input{
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+

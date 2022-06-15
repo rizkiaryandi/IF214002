@@ -1,0 +1,45 @@
+ion-segment-button{
+    text-transform:none!important;
+}
+
+#body-container{
+    margin-top: 10px;
+    ion-buttons{
+        margin-left: 10px;
+    }
+}
+
+#empty{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-tengah{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    text-align: center;
+    color: var(--ion-color-medium);
+    p{
+        font-size: 14px;
+        margin: 0px;
+    }
+    ion-icon{
+        font-size: 40px;
+    }
+}
+
+#ho1{
+    ion-avatar,
+    ion-avatar > img{
+        border-radius:8px;
+        height:50px;
+        width:50px;
+    }
+}

@@ -1,0 +1,152 @@
+<div id="features-container">
+  <ion-item color="transparent" lines="none">
+    <ion-button slot="start" (click)="dismiss()">
+      <ion-icon name="close-outline"></ion-icon>
+    </ion-button>
+    <ion-buttons slot="end">
+      <ion-button (click)="slidePrev()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="slideNext()">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-slides #slides>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-left">
+            <h4>Kampus</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3" (click)="openUrl('https://eknows.uinsgd.ac.id/', 'E-Knows')">
+            <div>
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <p>E-Knows</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://opac.uinsgd.ac.id/', 'Opac - UINSGD')">
+            <div>
+              <ion-icon name="library-outline"></ion-icon>
+            </div>
+            <p>Opac</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://salam.uinsgd.ac.id/', 'Salam UINSGD')">
+            <div>
+              <ion-icon name="file-tray-full"></ion-icon>
+            </div>
+            <p>Salam</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://uinsgd.ac.id/', 'Web UINSGD')">
+            <div>
+              <ion-icon name="logo-web-component"></ion-icon>
+            </div>
+            <p>Web-Uin</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://www.instagram.com/uinsgd_official/', 'Instagram - UINSGD')">
+            <div>
+              <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+            <p>IG-Uin</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://www.youtube.com/channel/UCEeGdjh7dfuAJUQAQCq1ZQA', 'Youtube - UINSGD')">
+            <div>
+              <ion-icon name="logo-youtube"></ion-icon>
+            </div>
+            <p>YT-Uin</p>
+          </ion-col>
+          <ion-col size="3" (click)="openUrl('https://facebook.com/UIN-SGD-Bandung-189067647828897/', 'Facebook - UINSGD')">
+            <div>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </div>
+            <p>FB-Uin</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-left">
+            <h4>Aktivitas</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3" (click)="pagesNavigate('marketplace')">
+            <div>
+              <ion-icon name="storefront-outline"></ion-icon>
+            </div>
+            <p>Marketplace</p>
+          </ion-col>
+          <ion-col size="3" (click)="pagesNavigate('service')">
+            <div>
+              <ion-icon name="walk-outline"></ion-icon>
+            </div>
+            <p>Jasa</p>
+          </ion-col>
+          <ion-col size="3" (click)="pagesNavigate('forum')">
+            <div>
+              <ion-icon name="infinite-outline"></ion-icon>
+            </div>
+            <p>Forum</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-left">
+            <h4>Jadwal</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3" (click)="pagesNavigate('schedule/0')">
+            <div>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </div>
+            <p>Mata Kuliah</p>
+          </ion-col>
+          <ion-col size="3" (click)="pagesNavigate('schedule/1')">
+            <div>
+              <ion-icon name="document-attach-outline"></ion-icon>
+            </div>
+            <p>Tugas</p>
+          </ion-col>
+          <ion-col size="3" (click)="pagesNavigate('schedule/2')">
+            <div>
+              <ion-icon name="calendar-number-outline"></ion-icon>
+            </div>
+            <p>Acara</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-left">
+            <h4>Alat</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3" (click)="pagesNavigate('note')">
+            <div>
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+            <p>Catatan</p>
+          </ion-col>
+          <ion-col size="3" (click)="pagesNavigate('prayer')">
+            <div>
+              <ion-icon name="archive-outline"></ion-icon>
+            </div>
+            <p>Waktu Shalat</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</div>

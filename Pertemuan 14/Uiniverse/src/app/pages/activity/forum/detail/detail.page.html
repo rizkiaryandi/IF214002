@@ -1,0 +1,117 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="forum" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-label color="primary">
+        <b>Kiriman</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div [ngStyle]="dis.post.slider">
+    <div class="post-wrap">
+      <ion-skeleton-text animated style="width: 100%; height:48px; margin-bottom: 5px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height:105px; margin-bottom: 5px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height:30px; margin-bottom: 5px;"></ion-skeleton-text>
+    </div>
+  </div>
+  <div [ngStyle]="dis.post.main" class="post-wrap">
+    <ion-item lines="none" button (click)="pagesNavigate('user/'+ps.user_id)">
+      <ion-avatar>
+        <img src="/assets/img/def_profile.png" alt="profil" *ngIf="ps.profile == null || ps.profile.length == 0; else prof;">
+        <ng-template #prof>
+          <img [src]="gn._base+'images/users/thumbnail/usr'+ps.profile" alt="profil">
+        </ng-template>
+      </ion-avatar>
+      <ion-label>
+        <b>
+          <span *ngIf="ps.name == null || ps.name.length == 0">Pengguna</span>
+          {{ps.name}}
+        </b>
+      </ion-label>
+    </ion-item>
+    <!-- <div class="achievement" *ngIf="ps.achievement.val != ''">
+      <ion-button size="small" color="success" mode="ios" (click)="pagesNavigate('forum/detail/'+ps.id+'/Selamat!')">
+        <ion-icon name="flower-outline" slot="start"></ion-icon> Selamat  
+      </ion-button>
+      <ion-button size="small" color="danger" mode="ios" (click)="pagesNavigate('forum/detail/'+ps.id+'/Keren!')">
+        <ion-icon name="flame-outline" slot="start"></ion-icon> Keren  
+      </ion-button>
+      <p>
+        <b><span *ngFor="let usc of ps.achievement.user" (click)="pagesNavigate('profile/'+usc.id)">
+          @{{usc.name}},&nbsp;
+        </span>{{ps.achievement.val}}</b>
+      </p>
+    </div> -->
+
+    <ion-slides *ngIf="ps.images && ps.images != '[]'" id="images" pager="true">
+      <ion-slide *ngFor="let imgs of gn.jParse(ps.images)">
+        <img [src]="gn._base+'images/posts/'+imgs" alt="foto">
+      </ion-slide>
+    </ion-slides>
+    <div class="main" style="white-space: pre-line">
+      {{ps.text}}
+    </div>
+    
+    <p>
+      <ion-text color="primary">
+        Dilihat {{ps.views}} kali
+      </ion-text>
+    </p>
+    <div class="action">
+      <ion-button size="small" color="primary" mode="ios" fill="outline" (click)="write()">
+        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon> Komentar<span *ngIf="ps.comment != '0'">&nbsp;• {{ps.comment}}</span>
+      </ion-button>
+      <ion-button size="small" color="primary" mode="ios" fill="solid">
+        <ion-icon name="share-social-outline" slot="start"></ion-icon> Bagikan
+      </ion-button>
+    </div>
+  </div>
+  <section id="comments">
+    <div [ngStyle]="dis.comment.slider">
+      <ion-skeleton-text animated style="width: 100%; height: 30px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 100px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 60px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 40px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 20px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 90px;"></ion-skeleton-text>
+    </div>
+    <div class="ion-padding ion-text-center" [ngStyle]="dis.comment.empty">
+      <ion-text color="medium">Tidak ada komentar</ion-text>
+    </div>
+    <div class="wrap" *ngFor="let cmn of cm" [ngStyle]="dis.comment.main" (click)="commentAction($event, cmn.id)">
+      <div class="thumbnail">
+        <img src="/assets/img/def_profile.png" alt="profil" *ngIf="cmn.img == null; else prof;">
+        <ng-template #prof>
+          <img [src]="gn._base+'images/users/thumbnail/usr'+cmn.img" alt="profil">
+        </ng-template>
+      </div>
+      <div class="main">
+        <div class="title" (click)="gn.pagesNavigate('user/'+cmn.user_id)">
+          <span *ngIf="cmn.name == null || cmn.name.length == 0">Pengguna Uiniverse</span>
+          {{cmn.name}}
+        </div>
+        <div class="text">
+          {{cmn.text}}
+        </div>
+        <!-- <div class="text">
+          <ion-button size="small" fill="clear" mode="ios" class="ion-no-padding">Hapus</ion-button>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section id="comment-input">
+    <form (ngSubmit)="addComment()" ngNativeValidate>
+      <ion-buttons>
+        <ion-textarea #area autoGrow="true" minLength="1" maxLength="500" placeholder="Tambah Komentar" [(ngModel)]="commentIn" name="commentIn" required></ion-textarea>
+        <ion-button type="submit" size="default" fill="clear" slot="end" color="primary" mode="ios">Kirim</ion-button>
+      </ion-buttons>
+    </form>
+  </section>
+</ion-content>

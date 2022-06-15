@@ -1,0 +1,19 @@
+<ion-content class="ion-padding">
+  <ion-list>
+    <p class="day">
+      {{st.deadline_start}} - {{st.deadline_end}}
+    </p>
+    <p class="title">
+      {{sc.name}}
+    </p>
+    <p class="description">
+      {{sc.description}}
+    </p>
+    <p class="time">
+      {{spec}}
+    </p>
+    <ion-button mode="ios" (click)="dismiss()" size="small">
+      Tutup
+    </ion-button>
+  </ion-list>
+</ion-content>

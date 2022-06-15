@@ -1,0 +1,19 @@
+ion-content{
+    overflow-y: scroll; 
+    .day{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .time{
+        font-size: 12px;
+    }
+    p{
+        margin: 0px;
+    }
+    ion-list{
+        width: 100%;
+    }
+}

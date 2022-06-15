@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesNavigate('home')">
+        <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Catatan</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-button mode="ios" expand="block" (click)="gn.pagesNavigate('note/add')">
+    Tambah Catatan
+  </ion-button>
+
+  <div [ngStyle]="dis.slider">
+    <ion-skeleton-text animated style="width: 100%; margin-top: 20px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 100%; margin-top: 10px; height: 120px;"></ion-skeleton-text>
+  </div>
+  <div class="empty" [ngStyle]="dis.empty">
+    <span>
+      <ion-icon name="document-text-outline"></ion-icon>
+    </span>
+    <p>
+      Belum ada catatan
+    </p>
+  </div>
+  <ion-list [ngStyle]="dis.main">
+    <ion-item lines="none" *ngFor="let dt of data">
+      <ion-label>
+        <p class="created-at">
+          {{dt.created_at}}
+        </p>
+        <p class="title">
+          {{dt.name}}
+        </p>
+        <p class="text">
+          {{dt.text}}
+        </p>
+        <ion-button size="small" color="success" mode="ios" (click)="gn.pagesNavigate('note/add/'+dt.id)">
+          Buka
+        </ion-button>
+        <ion-button size="small" color="danger" mode="ios"(click)="deleteItem(dt.id)">
+          Hapus
+        </ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

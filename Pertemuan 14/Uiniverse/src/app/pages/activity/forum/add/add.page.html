@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-back-button defaultHref="forum" slot="start" mode="ios" icon="arrow-back" color="primary"></ion-back-button>
+      <ion-label color="primary">
+        <b>Tambah Forum</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <form (ngSubmit)="logForm()" ngNativeValidate>
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-textarea placeholder="Tulis Sesuatu..." minlength="2" maxlength="10000" autoGrow="true" [(ngModel)]="todo.text" name="text" required></ion-textarea>
+    </ion-item>
+    
+    <ion-slides *ngIf="imgPrev.length > 0" [options]="{
+      initialSlide: 0,
+      slidesPerView : 3.4
+    }">
+      <ion-slide *ngFor = "let im of imgPrev">
+        <img [src]="im.src">
+        <ion-button size="small" color="danger" mode="ios" shape="round" (click)="rmImg(imgPrev.indexOf(im))">
+          Buang
+        </ion-button>
+      </ion-slide>
+    </ion-slides>
+
+    <input name="image" class="ion-hide" #f type="file" (change)="sImage($event)" accept="image/*">
+    <div id="btn">
+      <h6>Tambah:</h6>
+      <ion-button color="success" size="small" mode="ios" (click)="f.click($event)">
+        <ion-icon name="image-outline" slot="start"></ion-icon>
+        Foto
+      </ion-button>
+      <ion-button color="dark" size="small" mode="ios" (click)="disC()">
+        <ion-icon name="logo-web-component" slot="start"></ion-icon>
+        Link Website
+      </ion-button>
+      
+      <ion-item [ngStyle]="dis.url">
+        <ion-input type="url" placeholder="Tambah Url" minlength="3" maxlength="1000" [(ngModel)]="todo.url" name="url"></ion-input>
+      </ion-item>
+
+
+      <ion-button expand="block" mode="ios" type="submit" class="ion-margin-top">Kirim</ion-button>
+    </div>
+  </form>
+</ion-content>

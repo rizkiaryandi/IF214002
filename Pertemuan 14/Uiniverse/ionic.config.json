@@ -1,0 +1,7 @@
+{
+  "name": "Uiniverse",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

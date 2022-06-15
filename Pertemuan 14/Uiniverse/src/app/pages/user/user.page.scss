@@ -1,0 +1,197 @@
+ion-item{
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+#head-container{
+    ion-buttons{
+        margin: 20px 0px 0px 15px;
+        ion-back-button{
+            margin-right: 15px;
+            font-size: 12px;
+        }
+        ion-label{
+            font-size: 18px;
+        }
+    }
+}
+#body-container{
+    padding-top: 15px;
+    #profile-head{
+        ion-avatar{
+            width: 45px;
+            height: 45px;
+            background: #fff;
+        }
+        ion-label{
+            text-align: left;
+            #title{
+                font-weight: bold;
+                font-size: 20px;
+            }
+            #subtitle{
+                font-size: 12px;
+            }
+        }
+    }
+    #bio{
+        margin: 10px;
+        padding: 10px 16px 10px 16px;
+        background-color: rgb(var(--ion-color-light-rgb), 0.2);
+        border-radius: 10px;
+        #title{
+            font-size: 11px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #address{
+        margin: 10px;
+        padding: 10px 16px 10px 16px;
+        background-color: rgb(var(--ion-color-light-rgb), 0.2);
+        border-radius: 10px;
+        #title{
+            font-size: 11px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #feature{
+        ion-segment{
+            margin-left: calc(100% - 244px);
+            width: 232px;
+            ion-segment-button{
+                --indicator-color : rgb(255,2555,255, 0.2) !important;
+                ion-label{
+                    font-size: 12px;
+                    color: var(--ion-color-light);
+                }
+            }
+        }
+        ion-slides{
+            ion-slide{
+                width: 100%;
+                text-align: left !important;
+                .kosong{
+                    color: rgb(255,2555,255, 0.8);
+                    margin-top: 60px;
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                #marketplace{
+                    width: 100%;
+                    ion-grid{
+                      padding-top: 0px;
+                    }
+                    ion-button{
+                      margin: 4px 10px 10px 10px;
+                    }
+                    ion-col:active{
+                      opacity: 0.5;
+                    }
+                    .thumbnail{
+                      position: relative;
+                      width: 100%;
+                      img{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                      }
+                    }
+                    .thumbnail:after {
+                      content: "";
+                      display: block;
+                      padding-bottom: 100%;
+                    }
+                    ion-item{
+                      --padding-start: 8px;
+                      --padding-end: 8px;
+                      p{
+                        padding: 0px;
+                      }
+                      .price{
+                        font-size: 18px;
+                      }
+                      .name{
+                        font-size: 14px;
+                      }
+                      .location{
+                        color: rgb(var(--ion-color-light-rgb), 0.8);
+                      }
+                    }
+                }
+
+                #forum{
+                    width: 100%;
+                    padding: 10px 8px 10px 8px;
+                    ion-avatar{
+                        width: 25px;
+                        height: 25px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        background: #fff;
+                    }
+                    #images{
+                        --bullet-background: #ffffff;
+                        background: rgb(var(--ion-color-medium-rgb), 0.6);
+                        margin-bottom: 10px;
+                        ion-slide{
+                            max-height: calc(100vw - 28px);
+                            align-self: center;
+                        }
+                    }
+                    ion-label, p{
+                        margin: 4px 0px 0px 0px;
+                        color: var(--ion-color-light);
+                    }
+                    .post-wrap{
+                        background-color: rgb(var(--ion-color-light-rgb), 0.2);
+                        margin-top: 10px;
+                        padding: 7px 14px 10px 14px;
+                        border-radius: 10px;
+                        ion-item{
+                            --padding-start: 0px;
+                            --background: transparent;
+                            ion-avatar{
+                                width: 30px;
+                                height: 30px;
+                                margin-right: 12px;
+                            }
+                        }
+                        .main{
+                            font-size: 14px;
+                        }
+                        .achievement{
+                            font-size: 15px;
+                            margin-bottom: 10px;
+                            span{
+                                color: var(--ion-color-primary);
+                            }
+                        }
+                        .action{
+                            padding-top: 3px;
+                            ion-icon{
+                                margin-right: 5px;
+                            }
+                        }
+                        .main:active{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

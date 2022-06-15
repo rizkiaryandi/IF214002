@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" color="primary">
+  <div class="container-tengah">
+    <ion-list>
+      <div class="title">
+        <b>Uini</b>verse
+      </div>
+      <form (ngSubmit)="logForm()" ngNativeValidate enctype="multipart/form-data">
+        <ion-item lines="none">
+          <ion-input (ionChange)="inputTxt()" [(ngModel)]="data.username" name="username" type="text" placeholder="Nama Pengguna" mode="ios" required></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input (ionChange)="inputTxt()" [(ngModel)]="data.password" name="password" type="password" placeholder="Kata Sandi" mode="ios" required></ion-input>
+        </ion-item>
+        <ion-button type="submit" mode="ios" expand="block" fill="outline" size="default" color="light" [disabled]="ds">
+          Masuk
+        </ion-button>
+      </form>
+      <div class="ket">
+        Belum punya akun?
+      </div>
+      <ion-button mode="ios" expand="block" size="default" color="success" (click)="gn.pagesNavigate('register')">
+        Daftar
+      </ion-button>
+    </ion-list>
+  </div>
+
+</ion-content>

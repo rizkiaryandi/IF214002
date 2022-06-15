@@ -1,0 +1,489 @@
+<ion-content [fullscreen]="true" scrollY="false">
+  <section id="head-container" [ngStyle]="homeStyle.profile">
+    <ion-header [translucent]="true" class="ion-no-border">
+      <ion-toolbar color="transparent">
+        <ion-title>
+          <b><ion-text color="primary">Uini</ion-text><ion-text color="success">verse</ion-text></b>
+        </ion-title>
+        <ion-buttons slot="end" (click)="mainPopover($event, profile.id)">
+          <ion-button shape="round">
+            <ion-label>{{profile.name}}</ion-label>
+          <ion-avatar>
+            <img src="/assets/img/def_profile.png" alt="profil" *ngIf="profile.img == null; else prof;">
+            <ng-template #prof>
+              <img [src]="gn._base+'images/users/'+profile.img" alt="profil">
+            </ng-template>
+          </ion-avatar>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <section id="head">
+      <section id="feat">
+        <section class="scr" [ngStyle]="homeStyle.menu[0]">
+          <div class="items" (click)="gn.pagesNavigate('college')">
+            <div class="content" style="background-color: var(--ion-color-primary);">
+              <ion-icon name="school"></ion-icon>
+            </div>
+            <p>Kampus</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('forum')">
+            <div class="content" style="background-color: var(--ion-color-success);">
+              <ion-icon name="infinite"></ion-icon>
+            </div>
+            <p>Forum</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('marketplace')">
+            <div class="content" style="background-color: var(--ion-color-danger);">
+              <ion-icon name="storefront"></ion-icon>
+            </div>
+            <p>Marketplace</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('service')">
+            <div class="content" style="background-color: var(--ion-color-secondary);">
+              <ion-icon name="walk"></ion-icon>
+            </div>
+            <p>Jasa</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('note')">
+            <div class="content" style="background-color: #e6b22f;">
+              <ion-icon name="document-text"></ion-icon>
+            </div>
+            <p>Catatan</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('schedule/0')">
+            <div class="content" style="background-color: #b82121;">
+              <ion-icon name="paper-plane"></ion-icon>
+            </div>
+            <p>Mata Kuliah</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('schedule/1')">
+            <div class="content" style="background-color: #8aac2f;">
+              <ion-icon name="document-attach"></ion-icon>
+            </div>
+            <p>Tugas</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('schedule/2')">
+            <div class="content" style="background-color: #a7308d;">
+              <ion-icon name="calendar-number"></ion-icon>
+            </div>
+            <p>Acara</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('prayer')">
+            <div class="content" style="background-color: var(--ion-color-tertiary);">
+              <ion-icon name="archive"></ion-icon>
+            </div>
+            <p>Waktu Sholat</p>
+          </div>
+          <div class="items" (click)="gn.pagesNavigate('covid19')">
+            <div class="content" style="background-color: #7c58ff;">
+              <ion-icon name="stats-chart"></ion-icon>
+            </div>
+            <p>Covid 19</p>
+          </div>
+        </section>
+        <section class="scr" [ngStyle]="homeStyle.menu[1]">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('college')">
+                  <div class="content" style="background-color: var(--ion-color-primary);">
+                    <ion-icon name="school"></ion-icon>
+                  </div>
+                  <p>Kampus</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('forum')">
+                  <div class="content" style="background-color: var(--ion-color-success);">
+                    <ion-icon name="infinite"></ion-icon>
+                  </div>
+                  <p>Forum</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('marketplace')">
+                  <div class="content" style="background-color: var(--ion-color-danger);">
+                    <ion-icon name="storefront"></ion-icon>
+                  </div>
+                  <p>Marketplace</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('service')">
+                  <div class="content" style="background-color: var(--ion-color-secondary);">
+                    <ion-icon name="walk"></ion-icon>
+                  </div>
+                  <p>Jasa</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('note')">
+                  <div class="content" style="background-color: #e6b22f;">
+                    <ion-icon name="document-text"></ion-icon>
+                  </div>
+                  <p>Catatan</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('schedule/0')">
+                  <div class="content" style="background-color: #b82121;">
+                    <ion-icon name="paper-plane"></ion-icon>
+                  </div>
+                  <p>Mata Kuliah</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('schedule/1')">
+                  <div class="content" style="background-color: #8aac2f;">
+                    <ion-icon name="document-attach"></ion-icon>
+                  </div>
+                  <p>Tugas</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('schedule/2')">
+                  <div class="content" style="background-color: #a7308d;">
+                    <ion-icon name="calendar-number"></ion-icon>
+                  </div>
+                  <p>Acara</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('prayer')">
+                  <div class="content" style="background-color: var(--ion-color-tertiary);">
+                    <ion-icon name="archive"></ion-icon>
+                  </div>
+                  <p>Waktu Sholat</p>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="items" (click)="gn.pagesNavigate('covid19')">
+                  <div class="content" style="background-color: #7c58ff;">
+                    <ion-icon name="stats-chart"></ion-icon>
+                  </div>
+                  <p>Covid 19</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </section>
+      </section>
+    </section>
+    
+  </section>
+  <section id="body-container" (scroll)="scrollY($event)" [ngStyle]="homeStyle.bodyContainer">
+    <ion-button class="mb" size="small" expand="block" mode="ios" (click)="menuEv(true)" [ngStyle]="homeStyle.btnMenu[0]">
+      <ion-icon name="chevron-down-outline" slot="start"></ion-icon> Lebih Banyak
+    </ion-button>
+    <ion-button class="mb" size="small" expand="block" mode="ios" (click)="menuEv(false)" [ngStyle]="homeStyle.btnMenu[1]">
+      <ion-icon name="chevron-up-outline" slot="start"></ion-icon> Perkecil
+    </ion-button>
+    <section id="body-container-b" [ngStyle]="homeStyle.bodyContainerB">
+      <section id="nav">
+        <ion-item lines="none" color="transparent">
+          <ion-searchbar mode="ios" placeholder="Telusuri" (click)="mainSearch($event)" class="searchbarinput"></ion-searchbar>
+          <ion-buttons>
+            <ion-button class="forum" size="default" (click)="featuresModal(3)">
+              <ion-icon name="brush-outline"></ion-icon>
+            </ion-button>
+            <ion-button class="forum" size="default" (click)="refr()">
+              <ion-icon name="refresh-outline"></ion-icon>
+            </ion-button>
+            <ion-button (click)="openMenu()" size="default">
+              <ion-icon name="menu-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </section>
+      <section id="userCheck" *ngIf="prfl">
+        <div class="y-card">
+          <ion-text color="light">
+            Sepertinya anda belum menambahkan informasi pribadi. Mohon segera mengubah informasi pribadi anda untuk fitur yang lebih menarik.
+          </ion-text>
+        </div>
+        
+        <ion-button (click)="gn.pagesNavigate('home/edit')" size="small" color="danger" expand="block" mode="ios">
+          Ubah Informasi Pribadi
+        </ion-button>
+      </section>
+      <section id="schedule">
+        <ion-item lines="none" class="title">
+          <h4>
+            <b>Jadwal Terdekat</b>
+          </h4>
+          <ion-buttons slot="end">
+            <ion-button fill="clear" (click)="scheduleFilter()">
+              <ion-icon name="options-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" (click)="schedulePopover($event)">
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <div [ngStyle]="dis.schedule.empty" class="ion-text-center">
+          <ion-button color="light" fill="outline" mode="ios" (click)="schedulePopover($event)">
+            Kelola Jadwal
+          </ion-button>
+        </div>
+        <div [ngStyle]="dis.schedule.main">
+          <ion-slides [options]="scheduleSlidesOptions" #scheduleSlides>
+            <ion-slide *ngFor="let sc of schedule">
+              <ion-item lines="none" *ngIf="sc.type == 'college'">
+                <ion-label>
+                  <p class="day">
+                    {{gn.day(sc.specific)}}, {{gn.tsTime(sc.deadline_start)}} - {{gn.tsTime(sc.deadline_end)}}
+                  </p>
+                  <p class="title">
+                    {{sc.name}}
+                  </p>
+                  <p class="description">
+                    {{sc.description}}
+                  </p>
+                  <p class="time">
+                    <ion-icon name="paper-plane-outline"></ion-icon> Mata Kuliah
+                  </p>
+                  <ion-button color="light" fill="outline" mode="ios" (click)="scheduleModal(sc)">
+                    Lihat
+                  </ion-button>
+                  <ion-button color="light" fill="outline" mode="ios" (click)="ekn()">
+                    E-Knows
+                  </ion-button>
+                </ion-label>
+              </ion-item>
+              <ion-item lines="none" *ngIf="sc.type == 'task'">
+                <ion-label>
+                  <p class="day">
+                    <span class="deadline">Deadline</span> {{sc.deadline_start}}
+                  </p>
+                  <p class="title">
+                    {{sc.name}}
+                  </p>
+                  <p class="description">
+                    {{sc.description}}
+                  </p>
+                  <p class="time">
+                    <ion-icon name="document-attach-outline"></ion-icon> {{sc.specific}}
+                  </p>
+                  <ion-button color="light" fill="outline" mode="ios" (click)="scheduleModal(sc)">
+                    Lihat
+                  </ion-button>
+                </ion-label>
+              </ion-item>
+              <ion-item lines="none" *ngIf="sc.type == 'event'">
+                <ion-label>
+                  <p class="day">
+                    {{sc.deadline_start}}
+                  </p>
+                  <p class="title">
+                    {{sc.name}}
+                  </p>
+                  <p class="description">
+                    {{sc.description}}
+                  </p>
+                  <p class="time">
+                    <ion-icon name="calendar-number-outline"></ion-icon> {{sc.specific}}
+                  </p>
+                  <ion-button color="light" fill="outline" mode="ios" (click)="scheduleModal(sc)">
+                    Lihat
+                  </ion-button>
+                </ion-label>
+              </ion-item>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <div [ngStyle]="dis.schedule.slider">
+          <ion-item>
+            <ion-skeleton-text animated style="width: 60%; height: 136px;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 40%; height: 136px;"></ion-skeleton-text>
+          </ion-item>
+        </div>
+      </section>
+      <section id="portal">
+        <ion-item color="transparent" lines="none" class="title">
+          <ion-label slot="start">
+            <b>{{portalSlideTitle}}</b>
+          </ion-label>
+          <ion-segment slot="end" value="0" mode="ios" (ionChange)="slide($event.target.value)" scrollable>
+            <ion-segment-button value="0">
+              <ion-icon name="storefront"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+              <ion-icon name="walk"></ion-icon>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
+        <ion-slides #portalSlides class="swiper-no-swiping">
+          <ion-slide>
+            <section id="marketplace">
+              <ion-button color="primary" fill="solid" expand="block" size="small" (click)="gn.pagesNavigate('marketplace')">
+                Buka Marketplace
+              </ion-button>
+              <div [ngStyle]="dis.marketplace.empty" class="ion-text-center h8">
+                <ion-text color="light" class="ion-margin-top">
+                  Belum tersedia marketplace
+                </ion-text>
+              </div>
+              <ion-grid [ngStyle]="dis.marketplace.main">
+                <ion-row>
+                  <ion-col size="6" *ngFor="let mp of marketplace" (click)="gn.pagesNavigate('marketplace/detail/'+mp.id)">
+                    <div class="thumbnail" *ngIf="mp.thumbnail == NULL">
+                      <img src="/assets/img/no-image.png">
+                    </div>
+                    <div class="thumbnail" *ngIf="mp.thumbnail != NULL">
+                      <img [src]="gn._base+'images/marketplace/thumbnail/'+mp.thumbnail">
+                    </div>
+                    <ion-item color="transparent" lines="none">
+                      <ion-label>
+                        <p class="price">Rp {{mp.price}}</p>
+                        <p class="name">{{mp.title}}</p>
+                        <p class="location">{{mp.location}}</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-grid [ngStyle]="dis.marketplace.slider">
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+                      <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </section>
+          </ion-slide>
+          <ion-slide>
+            <section id="jasa">
+              <ion-button mode="ios" color="light" fill="outline" size="small" (click)="gn.pagesNavigate('service')">
+                <ion-icon name="walk-outline" slot="start"></ion-icon> Bersedia
+              </ion-button>
+              <ion-button mode="ios" color="success" fill="solid" size="small" (click)="gn.pagesNavigate('service/add')">
+                <ion-icon name="add-outline" slot="start"></ion-icon>
+                Perlu Jasa
+              </ion-button>
+              <div [ngStyle]="dis.service.empty" class="ion-text-center h8">
+                <ion-text color="light">
+                  Belum tersedia Jasa
+                </ion-text>
+              </div>
+              <div [ngStyle]="dis.service.main">
+                <div class="cont" *ngFor="let js of service">
+                  <ion-label>
+                    <p class="user">{{js.name}}</p>
+                    <p class="title">{{js.title}}</p>
+                    <p class="text">{{js.text}}</p>
+                    <p class="payment"><b>Bayaran:</b> Rp {{js.payment}}</p>
+                    <ion-button size="small" mode="ios" color="light" fill="outline" (click)="gn.pagesNavigate('service/detail/'+js.id)">
+                      <ion-icon name="eye-outline" slot="start"></ion-icon> Lihat
+                    </ion-button>
+                    <ion-button size="small" mode="ios" color="success" (click)="waSend(js.tel, js.name)">
+                      <ion-icon name="logo-whatsapp" slot="start"></ion-icon> Ambil
+                    </ion-button>
+                  </ion-label>
+                </div>
+              </div>
+              <div [ngStyle]="dis.service.slider">
+                <div class="cont">
+                  <ion-label>
+                    <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+                  </ion-label>
+                </div>
+                <div class="cont">
+                  <ion-label>
+                    <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+                  </ion-label>
+                </div>
+                <div class="cont">
+                  <ion-label>
+                    <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+                  </ion-label>
+                </div>
+                <div class="cont">
+                  <ion-label>
+                    <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+                  </ion-label>
+                </div>
+                <div class="cont">
+                  <ion-label>
+                    <ion-skeleton-text animated style="height: 12px; width: 90px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 18px; width: 120px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 14px; width: 130px;"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="height: 24px; width: 75px;"></ion-skeleton-text>
+                  </ion-label>
+                </div>
+              </div>
+            </section>
+          </ion-slide>
+        </ion-slides>
+      </section>
+    </section>
+  </section>
+  <ion-menu side="end" menuId="menu" contentId="main" (ionDidClose)="closeMenu()">
+    <ion-content color="primary">
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      <ion-list color="primary">
+        <ion-list-header  color="primary">
+          <ion-item color="primary" button (click)="gn.pagesNavigate('profile')">
+            <ion-avatar slot="start">
+              <img src="/assets/img/def_profile.png" alt="profil" *ngIf="profile.img == null; else prof;">
+              <ng-template #prof>
+                <img [src]="gn._base+'images/users/'+profile.img" alt="profil">
+              </ng-template>
+            </ion-avatar>
+            <ion-label>
+              <b>{{profile.name}}</b> <br>
+              <span>{{profile.tel}}</span><br>
+            </ion-label>
+          </ion-item>
+        </ion-list-header>
+        <ion-item lines="none" button  color="primary" (click)="logout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-content>

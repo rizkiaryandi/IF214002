@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="pagesNavigate('marketplace')">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Item Saya</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="item ion-padding" [ngStyle]="dis.marketplace.slider">
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+    <ion-label class="ion-margin-bottom">
+      <ion-skeleton-text animated style="width: 40%; height: 25px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 100%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 30%; height: 15px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 30px;"></ion-skeleton-text>
+    </ion-label>
+  </div>
+  <div class="item" [ngStyle]="dis.marketplace.empty" class="ion-text-center ion-margin-top">
+    <p>Sepertinya anda belum memosting apapun di marketplace</p>
+    <ion-button size="small" (click)="gn.pagesNavigate('marketplace/add')" fill="outline" mode="ios">
+      Tambah Produk Marketplace
+    </ion-button>
+  </div>
+  <ion-item lines="none" *ngFor="let i of item" [ngStyle]="dis.marketplace.main">
+    <ion-avatar slot="start">
+      <img [src]="gn._base+'images/marketplace/thumbnail/'+i.thumbnail" *ngIf="i.thumbnail; else emp"/>
+      <ng-template #emp>
+        <img src="/assets/img/no-image.png" />
+      </ng-template>
+    </ion-avatar>
+    <ion-label>
+      <p class="title">{{i.title}}</p>
+      <p class="text">{{i.description}}</p>
+      <p class="payment"><b>Harga:</b> Rp {{i.price}}</p>
+      <ion-button size="small" color="success" mode="ios" (click)="gn.pagesNavigate('marketplace/add/'+i.id)">Update Item</ion-button>
+      <ion-button size="small" color="danger" mode="ios" (click)="delete(i.id)">Hapus/Terjual</ion-button>
+    </ion-label>
+  </ion-item>
+</ion-content>

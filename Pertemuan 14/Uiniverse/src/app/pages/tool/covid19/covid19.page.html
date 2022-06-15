@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="gn.pagesBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label color="primary">
+        <b>Info Covid 19</b>
+      </ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-progress-bar type="indeterminate" [ngStyle]="rev"></ion-progress-bar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <iframe (load)="loadEv($event)" src="https://kawalcorona.com/" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:100%;width:100%;border:none;overflow:hidden;"></iframe>
+</ion-content>

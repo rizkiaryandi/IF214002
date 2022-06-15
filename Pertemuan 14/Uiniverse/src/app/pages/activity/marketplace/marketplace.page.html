@@ -1,0 +1,98 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios">
+    <ion-buttons>
+      <ion-button (click)="pagesNavigate('home')">
+        <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-searchbar mode="ios" placeholder="Cari Sesuatu" (click)="mainSearch($event)" class="searchbarinput"></ion-searchbar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item lines="none">
+    <ion-buttons>
+      <ion-label color="primary">Urutkan</ion-label>
+      <ion-select value="notifications" interface="action-sheet" mode="ios" (ionChange)="sort($event.target.value)" >
+        <ion-select-option value="relevansi">Relevansi</ion-select-option>
+        <ion-select-option value="terbaru">Terbaru</ion-select-option>
+        <ion-select-option value="termurah">Termurah</ion-select-option>
+      </ion-select>
+    </ion-buttons>
+    <ion-button color="primary" fill="solid" size="small" mode="ios" (click)="pagesNavigate('marketplace/add')">
+      <ion-icon name="add-outline" slot="start"></ion-icon> Tambah
+    </ion-button>
+    <ion-button color="success" fill="solid" size="small" mode="ios" (click)="pagesNavigate('marketplace/list')">
+      <ion-icon name="pricetags-outline" slot="start"></ion-icon> Item Saya
+    </ion-button>
+  </ion-item>
+  
+  <div [ngStyle]="dis.marketplace.empty" class="ion-text-center h8 ion-padding">
+    <p>Tidak ada Item</p>
+    <ion-button (click)="refresh()" fill="outline" mode="ios">
+      Segarkan
+    </ion-button>
+  </div>
+
+  <ion-grid [ngStyle]="dis.marketplace.main">
+    <ion-row>
+      <ion-col size="6" *ngFor="let mp of marketplace" (click)="this.pagesNavigate('marketplace/detail/'+mp.id)">
+        <div class="thumbnail" *ngIf="mp.thumbnail == NULL">
+          <img src="/assets/img/no-image.png">
+        </div>
+        <div class="thumbnail" *ngIf="mp.thumbnail != NULL">
+          <img [src]="gn._base+'images/marketplace/thumbnail/'+mp.thumbnail">
+        </div>
+        <ion-item color="transparent" lines="none">
+          <ion-label>
+            <p class="price">Rp {{mp.price}}</p>
+            <p class="name">{{mp.title}}</p>
+            <p class="location">{{mp.location}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid [ngStyle]="dis.marketplace.slider">
+    <ion-row>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-skeleton-text animated style="height: 120px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 20px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 13px;"></ion-skeleton-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

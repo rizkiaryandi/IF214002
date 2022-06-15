@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <div id="head-container">
+    <ion-buttons>
+      <ion-back-button defaultHref="home" slot="start" mode="ios" icon="arrow-back"></ion-back-button>
+      <ion-label color="primary">
+        <b>Notifikasi</b>
+      </ion-label>
+    </ion-buttons>
+  </div>
+  <div id="body-container">
+    <ion-list>
+      <ion-item button detail="false" class="ion-no-border" *ngFor="let nf of notif">
+        <ion-avatar slot="start">
+            <img [src]="'/assets/img/'+nf.img" alt="avatar">
+        </ion-avatar>
+        <ion-label>
+            <ion-text color="dark">
+                <span class="title"><b>{{nf.title}}</b></span>
+                <p>{{nf.text}}</p>
+                <p>{{tm.timestampDate(nf.date)}}</p>
+            </ion-text>
+        </ion-label>
+    </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

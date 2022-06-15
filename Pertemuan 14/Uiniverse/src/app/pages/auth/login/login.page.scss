@@ -1,0 +1,36 @@
+ion-content{
+    ion-list{
+        background-color: transparent;
+        padding: 15px;
+
+        .title{
+            font-size: 24px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        ion-item{
+            --background: rgb(var(--ion-color-light-rgb), 0.1);
+            --color: #fff;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        ion-button{
+            margin-top: 10px;
+        }
+        .ket{
+            font-size: 12px;
+            padding-top: 6px;
+            text-align: center;
+        }
+    }
+
+    .container-tengah{
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        color: var(--ion-color-light);
+    }
+}

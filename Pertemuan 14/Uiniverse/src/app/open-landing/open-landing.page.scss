@@ -1,0 +1,28 @@
+img{
+    width: 65px;
+}
+
+span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p{
+    margin: 0px;
+}
+
+.f-bottom{
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    padding-bottom: 20px;
+    .n1{
+        font-size: 14px;
+        color: var(--ion-color-medium);
+    }
+    .n2{
+        font-size: 16px;
+        color: var(--ion-color-primary);
+    }
+}

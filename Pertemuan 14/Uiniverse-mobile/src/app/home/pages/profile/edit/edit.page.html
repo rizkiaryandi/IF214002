@@ -1,7 +1,12 @@
 <ion-content>
   <div id="head-container">
     <ion-buttons>
-      <ion-back-button defaultHref="home" slot="start" mode="ios" icon="arrow-back"></ion-back-button>
+      <ion-back-button
+        defaultHref="home"
+        slot="start"
+        mode="ios"
+        icon="arrow-back"
+      ></ion-back-button>
       <ion-label color="primary">
         <b>Atur Profil</b>
       </ion-label>
@@ -11,7 +16,7 @@
     <ion-list mode="md">
       <ion-item lines="none" *ngIf="profile.img == null; else prof;">
         <ion-avatar slot="start">
-          <img src="/assets/img/def_profile.png" alt="profil">
+          <img src="/assets/img/def_profile.png" alt="profil" />
         </ion-avatar>
         <ion-button fill="clear" (click)="f.click($event)">
           <ion-icon name="image-outline" slot="start"></ion-icon>
@@ -22,7 +27,7 @@
       <ng-template #prof>
         <ion-item lines="none">
           <ion-avatar slot="start">
-            <img [src]="gn._base+'images/users/'+profile.img" alt="profil">
+            <img [src]="gn._base+'images/users/'+profile.img" alt="profil" />
           </ion-avatar>
           <ion-button fill="outline" (click)="f.click($event)" mode="ios">
             <ion-icon name="image-outline" slot="start"></ion-icon>
@@ -35,37 +40,65 @@
       </ng-template>
       <ion-item>
         <ion-label position="floating">Nama</ion-label>
-        <ion-input type="text" [(ngModel)]="profile.name" maxlength="50"></ion-input>
+        <ion-input
+          type="text"
+          [(ngModel)]="profile.name"
+          maxlength="50"
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Whatsapp</ion-label>
-        <ion-input type="tel" [(ngModel)]="profile.tel" maxlength="30"></ion-input>
+        <ion-input
+          type="tel"
+          [(ngModel)]="profile.tel"
+          maxlength="30"
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Instagram</ion-label>
-        <ion-input type="text" [(ngModel)]="profile.ig" maxlength="30"></ion-input>
+        <ion-input
+          type="text"
+          [(ngModel)]="profile.ig"
+          maxlength="30"
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" [(ngModel)]="profile.em" maxlength="65"></ion-input>
+        <ion-input
+          type="email"
+          [(ngModel)]="profile.em"
+          maxlength="65"
+        ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Bio</ion-label>
-        <ion-textarea rows="4" [(ngModel)]="profile.bio" maxlength="150"></ion-textarea>
+        <ion-textarea
+          rows="4"
+          [(ngModel)]="profile.bio"
+          maxlength="150"
+        ></ion-textarea>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Tempat tinggal saat ini</ion-label>
-        <ion-textarea rows="2" [(ngModel)]="profile.address" maxlength="50"></ion-textarea>
+        <ion-textarea
+          rows="2"
+          [(ngModel)]="profile.address"
+          maxlength="50"
+        ></ion-textarea>
       </ion-item>
 
-      
-    <input name="img" class="ion-hide" #f type="file" (change)="sImage($event)" accept="image/*">
+      <input
+        name="img"
+        class="ion-hide"
+        #f
+        type="file"
+        (change)="sImage($event)"
+        accept="image/*"
+      />
     </ion-list>
   </div>
-  
-  
+
   <ion-button expand="block" class="ion-margin" (click)="simpan()">
     Simpan Perubahan
   </ion-button>
-  
 </ion-content>

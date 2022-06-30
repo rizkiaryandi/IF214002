@@ -1,6 +1,6 @@
 # Ide Bisnis: Sistem absensi masuk gedung fakultas
 
-![plot](./erd.jpg.jpg)
+![plot](./erd.jpg)
 
 ## Deskripsi
 

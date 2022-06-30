@@ -87,7 +87,7 @@ INSERT INTO `absensi` (`id`, `id_mahasiswa`, `id_mata_kuliah`, `waktu_masuk`) VA
 (1, 1, 1, '2022-06-30 02:59:24');
 ```
 
-# DQL
+### DQL
 
 (Get Data Kehadiran Mahasiswa di bulan 6)
 

@@ -36,7 +36,7 @@ Data mahasiswa dan mata kuliah diimport dari database salam, adapun nantinya unt
 
 ## Rancangan ERD
 
-![plot](./erd.jpg.jpg)
+![plot](./erd.jpg)
 
 ## Model Fisik Basis Data
 

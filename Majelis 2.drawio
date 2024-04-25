@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-25T06:10:46.174Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="mdrZBJE1m_ChfnoHJR41" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-25T06:16:28.380Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="P9fAg5TZl4BcIS08bY2f" version="24.2.7" type="github">
   <diagram name="Page-1" id="fWyHtkor9l7rRrTD2WUf">
-    <mxGraphModel dx="1613" dy="518" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2440" dy="1078" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -77,7 +77,7 @@
           <mxGeometry x="106" y="50" width="487" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-42" value="Mahasiswa" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-148" y="1014" width="200" height="757" as="geometry" />
+          <mxGeometry x="-816" y="840" width="200" height="760" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-49" value="Mendaftar dan Input Berkas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-42">
           <mxGeometry x="40" y="172" width="120" height="40" as="geometry" />
@@ -101,7 +101,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-43" value="Administrator" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="252" y="1012" width="200" height="759" as="geometry" />
+          <mxGeometry x="-416" y="838" width="200" height="762" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-52" value="Memeriksa Berkas dan Data Pendaftaran" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-43">
           <mxGeometry x="41" y="174" width="120" height="40" as="geometry" />
@@ -118,19 +118,19 @@
           <mxGeometry x="40" y="239" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-46" value="Dosen" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="452" y="1012" width="200" height="759" as="geometry" />
+          <mxGeometry x="-216" y="838" width="200" height="762" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-64" value="Melakukan konfirmasi pengujian seminar" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-46">
           <mxGeometry x="38" y="420" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-60" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-57" target="_0-qu6X5wqAPZ1qLUZdc-61">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="351" y="1380" as="targetPoint" />
-            <mxPoint x="350.5" y="1356" as="sourcePoint" />
+            <mxPoint x="-317" y="1206" as="targetPoint" />
+            <mxPoint x="-317.5" y="1182" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-70" value="Sistem" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="52" y="1013" width="200" height="760" as="geometry" />
+          <mxGeometry x="-616" y="839" width="200" height="760" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-78" value="Menampilkan Menu Pendaftaran" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-70">
           <mxGeometry x="40" y="87" width="120" height="40" as="geometry" />
@@ -195,67 +195,67 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-48" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="_0-qu6X5wqAPZ1qLUZdc-47" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-48" y="1096" as="targetPoint" />
+            <mxPoint x="-716" y="922" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-79" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="_0-qu6X5wqAPZ1qLUZdc-78" parent="1" target="_0-qu6X5wqAPZ1qLUZdc-49">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="152" y="1200" as="targetPoint" />
+            <mxPoint x="-516" y="1026" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="152" y="1155" />
-              <mxPoint x="-48" y="1155" />
+              <mxPoint x="-516" y="981" />
+              <mxPoint x="-716" y="981" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-82" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-72" target="_0-qu6X5wqAPZ1qLUZdc-78">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-38" y="1106" as="targetPoint" />
-            <mxPoint x="-38" y="1074" as="sourcePoint" />
+            <mxPoint x="-706" y="932" as="targetPoint" />
+            <mxPoint x="-706" y="900" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-84" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-49" target="_0-qu6X5wqAPZ1qLUZdc-83">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="102" y="1130" as="targetPoint" />
-            <mxPoint x="22" y="1130" as="sourcePoint" />
+            <mxPoint x="-566" y="956" as="targetPoint" />
+            <mxPoint x="-646" y="956" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-85" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-83" target="_0-qu6X5wqAPZ1qLUZdc-52">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="102" y="1216" as="targetPoint" />
-            <mxPoint x="218" y="1208" as="sourcePoint" />
+            <mxPoint x="-566" y="1042" as="targetPoint" />
+            <mxPoint x="-450" y="1034" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-89" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-86" target="_0-qu6X5wqAPZ1qLUZdc-88">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="214" y="1306" as="targetPoint" />
-            <mxPoint x="360.5" y="1366" as="sourcePoint" />
+            <mxPoint x="-454" y="1132" as="targetPoint" />
+            <mxPoint x="-307.5" y="1192" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-95" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-61" target="_0-qu6X5wqAPZ1qLUZdc-93">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="303" y="1358" as="targetPoint" />
-            <mxPoint x="222" y="1358" as="sourcePoint" />
+            <mxPoint x="-365" y="1184" as="targetPoint" />
+            <mxPoint x="-446" y="1184" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-97" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-93" target="_0-qu6X5wqAPZ1qLUZdc-64">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="303" y="1358" as="targetPoint" />
-            <mxPoint x="222" y="1358" as="sourcePoint" />
+            <mxPoint x="-365" y="1184" as="targetPoint" />
+            <mxPoint x="-446" y="1184" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-65" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.563;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" source="_0-qu6X5wqAPZ1qLUZdc-64" parent="1" target="_0-qu6X5wqAPZ1qLUZdc-101">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="549" y="1514" as="targetPoint" />
+            <mxPoint x="-119" y="1340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-103" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-101" target="_0-qu6X5wqAPZ1qLUZdc-61">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="177" y="1507" as="targetPoint" />
-            <mxPoint x="568" y="1482" as="sourcePoint" />
+            <mxPoint x="-491" y="1333" as="targetPoint" />
+            <mxPoint x="-100" y="1308" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="119" y="1498" />
-              <mxPoint x="119" y="1464" />
-              <mxPoint x="323" y="1464" />
+              <mxPoint x="-549" y="1324" />
+              <mxPoint x="-549" y="1290" />
+              <mxPoint x="-345" y="1290" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -266,20 +266,20 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-100" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="_0-qu6X5wqAPZ1qLUZdc-99" parent="1" target="_0-qu6X5wqAPZ1qLUZdc-105">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="152" y="1654" as="targetPoint" />
+            <mxPoint x="-516" y="1480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-115" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-112" target="_0-qu6X5wqAPZ1qLUZdc-105">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-50" y="1669" as="targetPoint" />
-            <mxPoint x="102" y="1585" as="sourcePoint" />
+            <mxPoint x="-718" y="1495" as="targetPoint" />
+            <mxPoint x="-566" y="1411" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-117" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Activity Diagram Sistem Pendaftaran dan Manajemen Seminar&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-142" y="971" width="487" height="30" as="geometry" />
+          <mxGeometry x="-810" y="797" width="487" height="30" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-121" value="Mahasiswa" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="-425" y="1970" width="100" height="572" as="geometry" />
+          <mxGeometry x="-794" y="1761" width="100" height="572" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-126" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-121">
           <mxGeometry x="45" y="62" width="10" height="39" as="geometry" />
@@ -288,7 +288,7 @@
           <mxGeometry x="43" y="514" width="10" height="39" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-122" value="Administrator" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="-88" y="1970" width="100" height="525" as="geometry" />
+          <mxGeometry x="-457" y="1761" width="100" height="525" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-136" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-122">
           <mxGeometry x="45" y="176" width="10" height="39" as="geometry" />
@@ -297,13 +297,13 @@
           <mxGeometry x="45" y="287" width="10" height="39" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-123" value="Dosen" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="48" y="1970" width="100" height="530" as="geometry" />
+          <mxGeometry x="-321" y="1761" width="100" height="530" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-162" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-123">
           <mxGeometry x="45" y="398" width="10" height="39" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-124" value=":Sistem" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="-311" y="1970" width="100" height="538" as="geometry" />
+          <mxGeometry x="-680" y="1761" width="100" height="538" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-127" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-124">
           <mxGeometry x="45" y="90" width="10" height="39" as="geometry" />
@@ -318,7 +318,7 @@
           <mxGeometry x="45" y="316" width="10" height="39" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-125" value=":Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="-199" y="1970" width="100" height="530" as="geometry" />
+          <mxGeometry x="-568" y="1761" width="100" height="530" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-130" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-125">
           <mxGeometry x="45" y="121" width="10" height="39" as="geometry" />
@@ -418,7 +418,7 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-140" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-136" target="_0-qu6X5wqAPZ1qLUZdc-139">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-245" y="2178" as="targetPoint" />
+            <mxPoint x="-614" y="1969" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-141" value="Konfirmasi Berkas Pendaftaran" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_0-qu6X5wqAPZ1qLUZdc-140">
@@ -436,8 +436,8 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-150" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;exitX=1;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-255.5" y="2264" as="sourcePoint" />
-            <mxPoint x="-46" y="2267" as="targetPoint" />
+            <mxPoint x="-624.5" y="2055" as="sourcePoint" />
+            <mxPoint x="-415" y="2058" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-151" value="Tampilkan Hasil" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_0-qu6X5wqAPZ1qLUZdc-150">
@@ -463,8 +463,8 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-166" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;entryX=1;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" edge="1" parent="1" target="_0-qu6X5wqAPZ1qLUZdc-165" source="_0-qu6X5wqAPZ1qLUZdc-123">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-43" y="2404" as="sourcePoint" />
-            <mxPoint x="-245" y="2402" as="targetPoint" />
+            <mxPoint x="-412" y="2195" as="sourcePoint" />
+            <mxPoint x="-614" y="2193" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-167" value="Konfirmasi Berkas Pendaftaran" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_0-qu6X5wqAPZ1qLUZdc-166">
@@ -474,8 +474,8 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-175" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-154" y="2461" as="sourcePoint" />
-            <mxPoint x="-256" y="2461" as="targetPoint" />
+            <mxPoint x="-523" y="2252" as="sourcePoint" />
+            <mxPoint x="-625" y="2252" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-176" value="getData()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_0-qu6X5wqAPZ1qLUZdc-175">
@@ -485,8 +485,8 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-173" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-171" target="_0-qu6X5wqAPZ1qLUZdc-177">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-255.5" y="2487" as="sourcePoint" />
-            <mxPoint x="-46" y="2490" as="targetPoint" />
+            <mxPoint x="-624.5" y="2278" as="sourcePoint" />
+            <mxPoint x="-415" y="2281" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-174" value="Tampilkan&lt;div&gt;Jadwal dan&lt;/div&gt;&lt;div&gt;Penguji&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_0-qu6X5wqAPZ1qLUZdc-173">
@@ -495,7 +495,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-178" value="Users" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-776" y="2859" width="180" height="240" as="geometry" />
+          <mxGeometry x="148" y="1828" width="180" height="240" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-179" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-178">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -589,7 +589,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-194" value="Seminar" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-460" y="2859" width="209" height="422" as="geometry" />
+          <mxGeometry x="464" y="1828" width="209" height="422" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-195" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-194">
           <mxGeometry y="30" width="209" height="30" as="geometry" />
@@ -775,21 +775,33 @@
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-249" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-179" target="_0-qu6X5wqAPZ1qLUZdc-198">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-581" y="2933" as="sourcePoint" />
-            <mxPoint x="-540" y="3013" as="targetPoint" />
+            <mxPoint x="343" y="1902" as="sourcePoint" />
+            <mxPoint x="384" y="1982" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-250" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-179" target="_0-qu6X5wqAPZ1qLUZdc-201">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-586" y="2914" as="sourcePoint" />
-            <mxPoint x="-450" y="2944" as="targetPoint" />
+            <mxPoint x="338" y="1883" as="sourcePoint" />
+            <mxPoint x="474" y="1913" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-251" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_0-qu6X5wqAPZ1qLUZdc-179" target="_0-qu6X5wqAPZ1qLUZdc-204">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-586" y="2914" as="sourcePoint" />
-            <mxPoint x="-450" y="2974" as="targetPoint" />
+            <mxPoint x="338" y="1883" as="sourcePoint" />
+            <mxPoint x="474" y="1943" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-252" value="&lt;h3 style=&quot;text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; font-size: 1.25em; margin: 1rem 0px 0.5rem; line-height: 1.6; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;&lt;br&gt;&lt;/h3&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-799" y="60" width="18" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-254" value="&lt;h3 style=&quot;text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; font-size: 1.25em; margin: 1rem 0px 0.5rem; line-height: 1.6; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;1. Konteks:&lt;/h3&gt;&lt;p style=&quot;font-size: 16px; text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin: 0px 0px 1.25em; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;Perguruan tinggi sering mengadakan seminar sebagai bagian dari proses akademik, khususnya untuk mahasiswa yang akan menyelesaikan tugas akhir mereka. Seminar ini meliputi tahap-tahap seperti seminar proposal, kolokium, dan munaqosyah, yang merupakan momen penting dalam perjalanan akademik mahasiswa.&lt;/p&gt;&lt;h3 style=&quot;text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; font-size: 1.25em; margin: 1rem 0px 0.5rem; line-height: 1.6; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;2. Masalah:&lt;/h3&gt;&lt;p style=&quot;font-size: 16px; text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin: 0px 0px 1.25em; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;Pendaftaran seminar saat ini mungkin masih menggunakan proses manual yang rentan terhadap kesalahan dan memakan waktu. Proses manual ini dapat mencakup pengumpulan formulir fisik, penjadwalan yang sulit dilakukan secara efisien, dan komunikasi yang kurang jelas antara mahasiswa, dosen, dan staf administrasi.&lt;/p&gt;&lt;h3 style=&quot;text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; font-size: 1.25em; margin: 1rem 0px 0.5rem; line-height: 1.6; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;3. Tujuan:&lt;/h3&gt;&lt;p style=&quot;font-size: 16px; text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin: 0px 0px 1.25em; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;Tujuan dari analisis sistem pendaftaran seminar adalah untuk mengidentifikasi kebutuhan pengguna, mengevaluasi proses yang ada, dan merancang solusi yang lebih efisien dan terstruktur. Implementasi sistem baru diharapkan dapat meningkatkan efisiensi, akurasi, dan transparansi dalam manajemen pendaftaran seminar, sehingga mengurangi beban administrasi dan meningkatkan pengalaman mahasiswa.&lt;/p&gt;&lt;h3 style=&quot;text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; font-size: 1.25em; margin: 1rem 0px 0.5rem; line-height: 1.6; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;4. Manfaat yang Diharapkan:&lt;/h3&gt;&lt;ul style=&quot;font-size: 16px; text-align: start; white-space: pre-wrap; border: 0px solid rgb(227, 227, 227); box-sizing: border-box; list-style: outside; margin: 0px 0px 1rem; padding: 0px 0px 0px 1rem; caret-color: rgb(236, 236, 236); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;&lt;li style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-bottom: 0px; margin-top: 0px; padding-left: 0px;&quot;&gt;&lt;strong style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,0.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; margin-top: 1.25em; margin-bottom: 1.25em;&quot;&gt;Kemudahan Akses&lt;/strong&gt;: Mahasiswa dapat mendaftar seminar dari mana saja dan kapan saja melalui platform online.&lt;/li&gt;&lt;li style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-bottom: 0px; margin-top: 0px; padding-left: 0px;&quot;&gt;&lt;strong style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,0.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; margin-top: 1.25em; margin-bottom: 1.25em;&quot;&gt;Pengelolaan Jadwal yang Efisien&lt;/strong&gt;: Sistem dapat membantu dalam penjadwalan seminar berdasarkan ketersediaan dosen penguji dan preferensi mahasiswa.&lt;/li&gt;&lt;li style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-bottom: 0px; margin-top: 0px; padding-left: 0px;&quot;&gt;&lt;strong style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,0.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; margin-top: 1.25em; margin-bottom: 1.25em;&quot;&gt;Transparansi&lt;/strong&gt;: Mahasiswa, dosen, dan staf administrasi memiliki akses yang jelas terhadap status pendaftaran seminar.&lt;/li&gt;&lt;li style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-bottom: 0px; margin-top: 0px; padding-left: 0px;&quot;&gt;&lt;strong style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(69,89,164,0.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; margin-top: 1.25em; margin-bottom: 1.25em;&quot;&gt;Peningkatan Komunikasi&lt;/strong&gt;: Sistem memfasilitasi komunikasi yang lebih efektif antara mahasiswa, dosen pembimbing, dosen penguji, dan staf administrasi.&lt;/li&gt;&lt;li style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-bottom: 0px; margin-top: 0px; padding-left: 0px;&quot;&gt;&lt;strong style=&quot;border: 0px solid rgb(227, 227, 227); box-sizing: border-box; margin-top: 1.25em; margin-bottom: 1.25em;&quot;&gt;Pemantauan Kemajuan&lt;/strong&gt;: Staf administrasi dapat dengan mudah memantau kemajuan pendaftaran dan jadwal seminar secara real-time.&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-840" y="33" width="830" height="608" as="geometry" />
+        </mxCell>
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-255" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Sequence Diagram Sistem Pendaftaran dan Manajemen Seminar&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="1681" width="487" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-256" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ER Diagram Sistem Pendaftaran dan Manajemen Seminar&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1771" width="487" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

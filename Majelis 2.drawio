@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-04-25T04:57:56.228Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="hlbNHP-xiUBV3hW1Kro-" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-25T05:00:37.579Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="tgxG5G_4wtbV7nGB_9Zk" version="24.2.7" type="github">
   <diagram name="Page-1" id="fWyHtkor9l7rRrTD2WUf">
     <mxGraphModel dx="1363" dy="924" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="82" y="17" width="690" height="819" as="geometry" />
+        </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-2" value="Mahasiswa" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="158" y="327" width="30" height="60" as="geometry" />
         </mxCell>
@@ -87,6 +90,9 @@
             <mxPoint x="189" y="487" as="sourcePoint" />
             <mxPoint x="358" y="258" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="_0-qu6X5wqAPZ1qLUZdc-34" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Use Case 1.0 Sistem Pendaftaran dan Manajemen Seminar&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="106" y="50" width="487" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-25T05:38:26.474Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="MkAAr-CDAdDUd5exT-4U" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-25T05:38:39.189Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15" etag="ej7aXrVZgY2rmOoJnf3w" version="24.2.7" type="github">
   <diagram name="Page-1" id="fWyHtkor9l7rRrTD2WUf">
-    <mxGraphModel dx="1645" dy="539" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2440" dy="1078" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -101,7 +101,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-43" value="Administrator" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="252" y="1012" width="200" height="656" as="geometry" />
+          <mxGeometry x="252" y="1012" width="200" height="759" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-52" value="Memeriksa Berkas dan Data Pendaftaran" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-43">
           <mxGeometry x="41" y="174" width="120" height="40" as="geometry" />
@@ -118,7 +118,7 @@
           <mxGeometry x="40" y="239" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-46" value="Dosen" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="452" y="1012" width="200" height="656" as="geometry" />
+          <mxGeometry x="452" y="1012" width="200" height="759" as="geometry" />
         </mxCell>
         <mxCell id="_0-qu6X5wqAPZ1qLUZdc-64" value="Melakukan konfirmasi pengujian seminar" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="_0-qu6X5wqAPZ1qLUZdc-46">
           <mxGeometry x="38" y="420" width="120" height="40" as="geometry" />
